@@ -24,6 +24,7 @@
       <li>AptitudeStrong_Social</li>
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody</li>
+      <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
     </genes>

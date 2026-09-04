@@ -25,6 +25,7 @@
       <li>AptitudeTerrible_Intellectual</li>
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody_Direhorse</li>
+      <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
     </genes>

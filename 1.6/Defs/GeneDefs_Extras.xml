@@ -2,11 +2,19 @@
 <Defs>
   <GeneDef ParentName="GeneNoseBase">
     <defName>DZ_CentaurAnimalNose</defName>
-    <label>canine nose</label>
-    <description>Carriers of this gene have wolf-like noses.</description>
+    <label>animal nose</label>
+    <description>Carriers of this gene have animal-like noses.</description>
     <iconPath>UI/Icons/Genes/Gene_DZ_CentaurAnimalNose</iconPath>
     <biostatCpx>1</biostatCpx>
-    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>410.1</displayOrderInCategory>
+  </GeneDef>
+  <GeneDef ParentName="GeneNoseBase">
+    <defName>DZ_CentaurNose</defName>
+    <label>centaur head</label>
+    <description>Carriers of this gene lack human ears in favor of centaur ears.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_CentaurEars</iconPath>
+    <biostatCpx>1</biostatCpx>
     <displayCategory>Miscellaneous</displayCategory>
     <displayOrderInCategory>410.1</displayOrderInCategory>
   </GeneDef>
@@ -51,6 +59,16 @@
     <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
     <targetGeneDefs>
       <li>DZ_CentaurAnimalNose</li>
+    </targetGeneDefs>
+  </FacialAnimation.HeadTypeDef>
+  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+    <defName>DZ_CentaurNose</defName>
+    <texPath>Things/Pawn/FA-Experimentals/Heads_Blank/Normal_NoEar</texPath>
+    <probability>1</probability>
+    <shader>Map/CutoutSkin</shader>
+    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+    <targetGeneDefs>
+      <li>DZ_CentaurNose</li>
     </targetGeneDefs>
   </FacialAnimation.HeadTypeDef>
 </Defs>
