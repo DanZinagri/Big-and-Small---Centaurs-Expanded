@@ -5,10 +5,12 @@
     <li>1.6</li>
     <li IfModNotActive="RedMattis.BigSmall.Core">1.6/Mods/NoGenesAndMore</li>
     <li IfModNotActive="Nals.FacialAnimation">1.6/Mods/NoFacialAnimation</li>
+    <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/NoVTEFacialAnimation</li>
     <li IfModActive="veterano.mythicages.megafaunabestiary">1.6/Mods/MythicAges</li>
     <li IfModActive="OskarPotocki.VFE.Medieval2">1.6/Mods/VFEMedieval</li>
     <li IfModActive="tug.Minotaur.Expanded">1.6/Mods/RoosMinotaur</li>
     <li IfModActive="Euterpe.MilkyTitfuck">1.6/Mods/LactationExpansion</li>
     <li IfModActive="Ludeon.RimWorld.Odyssey">1.6/Mods/Odyssey</li>
+    <li IfModActive="DanZinagri.AtavismLibraries">1.6/Mods/Atavism</li>
   </v1.6>
 </loadFolders>

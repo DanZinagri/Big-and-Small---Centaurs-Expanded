@@ -14,6 +14,7 @@
     </li>
   </modDependencies>
   <loadAfter>
+    <li>DanZinagri.AtavismLibraries</li>
     <li>RedMattis.BetterPrerequisites</li>
     <li>RedMattis.BigSmall.Core</li>
     <li>veterano.mythicages.megafaunabestiary</li>

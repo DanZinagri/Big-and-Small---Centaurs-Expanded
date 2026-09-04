@@ -51,24 +51,4 @@
       </suffixSymbols>
     </symbolPack>
   </GeneDef>
-  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
-    <defName>DZ_CentaurAnimalNose</defName>
-    <texPath>DZ_CentaurAnimalNose</texPath>
-    <probability>1</probability>
-    <shader>Map/CutoutSkin</shader>
-    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
-    <targetGeneDefs>
-      <li>DZ_CentaurAnimalNose</li>
-    </targetGeneDefs>
-  </FacialAnimation.HeadTypeDef>
-  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
-    <defName>DZ_CentaurNose</defName>
-    <texPath>Things/Pawn/FA-Experimentals/Heads_Blank/Normal_NoEar</texPath>
-    <probability>1</probability>
-    <shader>Map/CutoutSkin</shader>
-    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
-    <targetGeneDefs>
-      <li>DZ_CentaurNose</li>
-    </targetGeneDefs>
-  </FacialAnimation.HeadTypeDef>
 </Defs>
