@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Big and Small - Centaurs Expanded</name>
+  <author>DanZinagri</author>
+  <packageId>DZ.BSCentaursExpanded</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>RedMattis.BetterPrerequisites</packageId>
+      <displayName>Big and Small - Framework</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2925432336</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>RedMattis.BetterPrerequisites</li>
+    <li>RedMattis.BigSmall.Core</li>
+    <li>veterano.mythicages.megafaunabestiary</li>
+  </loadAfter>
+  <description>Centaur body genes and xenotypes for the Big and Small framework.
+
+Always available (needs only the framework):
+  - centauroid body gene, using the framework's own centaur art
+  - light centauroid body gene, canine nose gene
+  - Centaur xenotype
+
+Added when Mythic Ages: Megafauna Bestiary is installed:
+  - direhorse body gene, with a coat pattern picked at random per pawn
+  - Dire Centaur and Wooly Centaur xenotypes
+
+Requires Biotech and Big and Small - Framework. Mythic Ages and Genes &amp; More are both optional.</description>
+</ModMetaData>

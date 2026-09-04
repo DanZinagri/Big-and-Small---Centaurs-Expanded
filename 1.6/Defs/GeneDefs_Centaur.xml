@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef Name="DZ_CentaurBody_Base" ParentName="BS_BodySwitchNonExclusive" Abstract="True">
+    <statOffsets>
+      <CarryingCapacity>50</CarryingCapacity>
+    </statOffsets>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+      <CarryingCapacity>1.3</CarryingCapacity>
+    </statFactors>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <randomChosen>false</randomChosen>
+    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <exclusionTags>
+      <li>Bug_BodyAttachment</li>
+      <li>taur</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <thingDefSwap>BS_Centaur</thingDefSwap>
+      </li>
+      <li Class="BigAndSmall.Flagger"><flags><ShowBaseAbdomen/></flags></li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="DZ_CentaurBody_Base">
+    <defName>DZ_CentaurBody</defName>
+    <label>centauroid body</label>
+    <description>Carriers of this gene have the four-legged lower body of a horse in place of regular human legs, letting them move quickly and haul far more than a two-legged frame allows. The equine frame makes them larger and sturdier than a baseliner.</description>
+    <displayOrderInCategory>799</displayOrderInCategory>
+    <statFactors>
+      <SM_BodySizeMultiplier>1.15</SM_BodySizeMultiplier>
+      <ConstructionSpeed>1.05</ConstructionSpeed>
+    </statFactors>
+  </GeneDef>
+
+  <GeneDef ParentName="DZ_CentaurBody_Base">
+    <defName>DZ_CentaurBody_Light</defName>
+    <label>light centauroid body</label>
+    <statFactors>
+      <MoveSpeed>1.4</MoveSpeed>
+      <CarryingCapacity>1.1</CarryingCapacity>
+      <SM_BodySizeMultiplier>1.05</SM_BodySizeMultiplier>
+    </statFactors>
+    <description>Carriers of this gene have the four-legged lower body of a horse in place of regular human legs, on a lighter racing build that stays close to baseliner size.</description>
+    <displayOrderInCategory>799.5</displayOrderInCategory>
+  </GeneDef>
+
+</Defs>

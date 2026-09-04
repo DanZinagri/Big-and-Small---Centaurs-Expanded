@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef Name="DZ_CentaurBody_DireBase" ParentName="BS_BodySwitchNonExclusive" Abstract="True">
+    <statOffsets>
+      <CarryingCapacity>50</CarryingCapacity>
+    </statOffsets>
+    <statFactors>
+      <MoveSpeed>1.2</MoveSpeed>
+      <CarryingCapacity>1.5</CarryingCapacity>
+    </statFactors>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <randomChosen>false</randomChosen>
+    <exclusionTags>
+      <li>Bug_BodyAttachment</li>
+      <li>taur</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <thingDefSwap>BS_Centaur</thingDefSwap>
+        <renderCacheOff>true</renderCacheOff>
+      </li>
+    </modExtensions>
+    <renderNodeProperties>
+      <!-- default body types -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <li>BSCE/Direhorse/BS_Direhorse</li>
+            <li>BSCE/Direhorse_Bay/BS_Direhorse_Bay</li>
+            <li>BSCE/Direhorse_Grullo/BS_Direhorse_Grullo</li>
+            <li>BSCE/Direhorse_Piebald/BS_Direhorse_Piebald</li>
+            <li>BSCE/Direhorse_Sorrel/BS_Direhorse_Sorrel</li>
+            <li>BSCE/Direhorse_White/BS_Direhorse_White</li>
+            <MaleBody_Fat>BS_Blank</MaleBody_Fat>
+            <FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+            <NoneBody_Fat>BS_Blank</NoneBody_Fat>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.48)</offset>
+            <layer>89.5</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0.08)</offset>
+            <layer>89.5</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <li>BSCE/Direhorse/BS_DirehorseBack</li>
+            <li>BSCE/Direhorse_Bay/BS_Direhorse_BayBack</li>
+            <li>BSCE/Direhorse_Grullo/BS_Direhorse_GrulloBack</li>
+            <li>BSCE/Direhorse_Piebald/BS_Direhorse_PiebaldBack</li>
+            <li>BSCE/Direhorse_Sorrel/BS_Direhorse_SorrelBack</li>
+            <li>BSCE/Direhorse_White/BS_Direhorse_WhiteBack</li>
+            <MaleBody_Fat>BS_Blank</MaleBody_Fat>
+            <FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+            <NoneBody_Fat>BS_Blank</NoneBody_Fat>
+          </texturePaths>
+          <colorA>
+            <replaceFlagsAndInactive><CentaurColorA/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <replaceFlagsAndInactive><CentaurColorB/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <visibleFacing><li>South</li></visibleFacing>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataSouth>
+            <offset>(0, 0.000, 0.08)</offset>
+            <layer>-4</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+      <!-- Fat: own offsets (z -0.15, x -0.05E/+0.05W vs default) -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Fat>BSCE/Direhorse/BS_Direhorse</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Bay/BS_Direhorse_Bay</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Grullo/BS_Direhorse_Grullo</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Piebald/BS_Direhorse_Piebald</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Sorrel/BS_Direhorse_Sorrel</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_White/BS_Direhorse_White</MaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse/BS_Direhorse</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Bay/BS_Direhorse_Bay</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Grullo/BS_Direhorse_Grullo</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Piebald/BS_Direhorse_Piebald</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Sorrel/BS_Direhorse_Sorrel</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_White/BS_Direhorse_White</FemaleBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse/BS_Direhorse</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Bay/BS_Direhorse_Bay</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Grullo/BS_Direhorse_Grullo</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Piebald/BS_Direhorse_Piebald</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Sorrel/BS_Direhorse_Sorrel</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_White/BS_Direhorse_White</NoneBody_Fat>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.63)</offset>
+            <layer>89.5</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, -0.07)</offset>
+            <layer>89.5</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.49, 0.0, -0.35)</offset>
+            <layer>89.5</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.49, 0.0, -0.35)</offset>
+            <layer>89.5</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Fat>BSCE/Direhorse/BS_DirehorseBack</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Bay/BS_Direhorse_BayBack</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Grullo/BS_Direhorse_GrulloBack</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Piebald/BS_Direhorse_PiebaldBack</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_Sorrel/BS_Direhorse_SorrelBack</MaleBody_Fat>
+            <MaleBody_Fat>BSCE/Direhorse_White/BS_Direhorse_WhiteBack</MaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse/BS_DirehorseBack</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Bay/BS_Direhorse_BayBack</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Grullo/BS_Direhorse_GrulloBack</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Piebald/BS_Direhorse_PiebaldBack</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_Sorrel/BS_Direhorse_SorrelBack</FemaleBody_Fat>
+            <FemaleBody_Fat>BSCE/Direhorse_White/BS_Direhorse_WhiteBack</FemaleBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse/BS_DirehorseBack</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Bay/BS_Direhorse_BayBack</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Grullo/BS_Direhorse_GrulloBack</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Piebald/BS_Direhorse_PiebaldBack</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_Sorrel/BS_Direhorse_SorrelBack</NoneBody_Fat>
+            <NoneBody_Fat>BSCE/Direhorse_White/BS_Direhorse_WhiteBack</NoneBody_Fat>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <replaceFlagsAndInactive><CentaurColorA/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <replaceFlagsAndInactive><CentaurColorB/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <visibleFacing><li>South</li></visibleFacing>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataSouth>
+            <offset>(0, 0.000, -0.07)</offset>
+            <layer>-4</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="DZ_CentaurBody_DireBase">
+    <defName>DZ_CentaurBody_Direhorse</defName>
+    <label>direhorse body</label>
+    <description>Carriers of this gene have the four-legged lower body of a direhorse in place of regular human legs. The shaggy coat pattern varies from carrier to carrier, and the heavy frame makes them larger and sturdier than a baseliner.
+
+Produces 30 direhorse wool every 25 days, modified by body size.</description>
+    <iconPath>BSCE/Icons/Direhorse</iconPath>
+    <displayOrderInCategory>800</displayOrderInCategory>
+    <geneClass>BigAndSmall.ProductionGene</geneClass>
+    <modExtensions>
+      <li Class="BigAndSmall.ProductionGeneSettings">
+        <product>MA_DirehorseWool</product>
+        <frequencyInDays>25</frequencyInDays>
+        <baseAmount>30</baseAmount>
+        <progressName>Growing direhorse wool</progressName>
+        <saveKey>DZ_DirehorseWoolProduction</saveKey>
+      </li>
+    </modExtensions>
+    <statFactors>
+      <SM_BodySizeMultiplier>1.30</SM_BodySizeMultiplier>
+      <ConstructionSpeed>1.05</ConstructionSpeed>
+    </statFactors>
+  </GeneDef>
+
+  <GeneDef ParentName="DZ_CentaurBody_DireBase">
+    <defName>DZ_CentaurBody_Wooly</defName>
+    <label>wooly direhorse body</label>
+    <description>Carriers of this gene have the four-legged lower body of a wooly direhorse in place of regular human legs. Bred for the cold, this lineage grows far larger and heavier than other centaurs.
+
+Produces 30 direhorse wool every 20 days, modified by body size.</description>
+    <iconPath>BSCE/Icons/Direhorse_White</iconPath>
+    <displayOrderInCategory>801</displayOrderInCategory>
+    <geneClass>BigAndSmall.ProductionGene</geneClass>
+    <modExtensions>
+      <li Class="BigAndSmall.ProductionGeneSettings">
+        <product>MA_DirehorseWool</product>
+        <frequencyInDays>20</frequencyInDays>
+        <baseAmount>30</baseAmount>
+        <progressName>Growing direhorse wool</progressName>
+        <saveKey>DZ_WoolyWoolProduction</saveKey>
+      </li>
+    </modExtensions>
+    <statFactors>
+      <SM_BodySizeMultiplier>1.80</SM_BodySizeMultiplier>
+      <ConstructionSpeed>1.10</ConstructionSpeed>
+    </statFactors>
+  </GeneDef>
+
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/XenotypeDef[defName="DZ_Centaur" or defName="DZ_Unicorn_Centaur" or defName="DZ_DireCentaur" or defName="DZ_WoolyCentaur"]/genes</xpath>
+    <value>
+      <li>SEX_MoreMilk</li>
+    </value>
+  </Operation>
+
+</Patch>

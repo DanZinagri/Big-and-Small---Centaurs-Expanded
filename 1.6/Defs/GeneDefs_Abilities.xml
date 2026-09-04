@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef>
+    <defName>DZ_Nightmare</defName>
+    <label>nightmare</label>
+    <description>Carriers can drag a waking nightmare up through a hostile's mind with a stare, sending them fleeing in panic for a short time.</description>
+    <iconPath>BSCE/Abilities/Nightmare</iconPath>
+    <displayCategory>Ability</displayCategory>
+    <prerequisite>Hemogenic</prerequisite>
+    <marketValueFactor>1.3</marketValueFactor>
+    <abilities>
+      <li>DZ_Nightmare</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>DZ_Nightmare</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>0</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>night</symbol></li>
+        <li><symbol>dread</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>mare</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+</Defs>

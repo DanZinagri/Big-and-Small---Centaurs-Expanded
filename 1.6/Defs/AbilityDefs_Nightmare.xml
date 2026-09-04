@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef>
+    <defName>DZ_Nightmare</defName>
+    <label>nightmare</label>
+    <description>Fix a creature with a stare that drags a waking nightmare up through their mind. The victim flees in blind panic for a short time. Sleep ends it early.</description>
+    <iconPath>BSCE/Abilities/Nightmare</iconPath>
+    <cooldownTicksRange>10000</cooldownTicksRange>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <writeCombatLog>true</writeCombatLog>
+    <aiCanUse>true</aiCanUse>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_Duration>45</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>9.9</range>
+      <drawAimPie>true</drawAimPie>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetSubhumans>false</canTargetSubhumans>
+        <neverTargetIncapacitated>true</neverTargetIncapacitated>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityHemogenCost">
+        <hemogenCost>0.1</hemogenCost>
+      </li>
+      <li Class="CompProperties_AbilityGiveMentalState">
+        <compClass>CompAbilityEffect_GiveMentalState</compClass>
+        <stateDef>DZ_Nightmare</stateDef>
+        <forced>true</forced>
+        <goodwillImpact>-15</goodwillImpact>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

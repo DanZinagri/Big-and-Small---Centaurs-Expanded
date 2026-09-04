@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <XenotypeDef>
+    <defName>DZ_Centaur</defName>
+    <label>centaur</label>
+    <description>Half human, half horse. Centaurs carry a human torso atop an equine body, trading the reach of a two-legged frame for speed and the strength to haul a punishing load.</description>
+    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <inheritable>true</inheritable>
+    <displayPriority>300</displayPriority>
+    <genes>
+      <li>Aggression_Aggressive</li>
+      <li>MeleeDamage_Strong</li>
+      <li>Body_Standard</li>
+      <li>Body_Hulk</li>
+      <li>AptitudeStrong_Shooting</li>
+      <li>AptitudeStrong_Melee</li>
+      <li>AptitudeTerrible_Artistic</li>
+      <li>AptitudeTerrible_Medicine</li>
+      <li>DZ_CentaurEars</li>
+      <li>DZ_CentaurBody</li>
+      <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
+      <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>DZ_Racing_Centaur</defName>
+    <label>racing centaur</label>
+    <description>A Racing Centaur, also known sometimes as Lightweight Centaur, are a smaller and faster varient of the centaur race.</description>
+    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <inheritable>true</inheritable>
+    <displayPriority>300</displayPriority>
+    <genes>
+      <li>MoveSpeed_Quick</li>
+      <li>NakedSpeed</li>
+      <li>Body_Standard</li>
+      <li>Body_Thin</li>
+      <li>AptitudeStrong_Melee</li>
+      <li>AptitudeTerrible_Construction</li>
+      <li>AptitudeTerrible_Cooking</li>
+      <li>DZ_CentaurEars</li>
+      <li>DZ_CentaurBody_Light</li>
+      <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
+      <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>DZ_Unicorn_Centaur</defName>
+    <label>unicorn centaur</label>
+    <description>A Unicorn Centaur, subspecies of Centaur that have had myths and legends written about them since before Grecian antiquity. Known as a symbol of virgin purity.</description>
+    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <inheritable>true</inheritable>
+    <displayPriority>300</displayPriority>
+    <genes>
+      <li>Ageless</li>
+      <li>ArchiteMetabolism</li>
+      <li>DiseaseFree</li>
+      <li>TotalHealing</li>
+      <li>PsychicAbility_Extreme</li>
+      <li>MeleeDamage_Weak</li>
+      <li>Delicate</li>
+      <li>Headbone_CenterHorn</li>
+      <li>Body_Standard</li>
+      <li>Body_Thin</li>
+      <li>Skin_Blue</li>
+      <li>Skin_SheerWhite</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>AptitudeTerrible_Melee</li>
+      <li>AptitudeStrong_Animals</li>
+      <li>AptitudeStrong_Artistic</li>
+      <li>AptitudeStrong_Medicine</li>
+      <li>AptitudeRemarkable_Social</li>
+      <li>DZ_CentaurEars</li>
+      <li>DZ_CentaurBody_Light</li>
+      <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
+      <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>DZ_Nightmare_Centaur</defName>
+    <label>Nightmare centaur</label>
+    <description>A Nightmare Centaur, subspecies of Centaur that is rumored to enter dreams of sleeping individuals and create nightmares.</description>
+    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <inheritable>true</inheritable>
+    <displayPriority>300</displayPriority>
+    <genes>
+      <li>ArchiteMetabolism</li>
+      <li>DiseaseFree</li>
+      <li>DZ_Nightmare</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">DZ_NightmareRoar</li>
+      <li>Hemogenic</li>
+      <li>Bloodfeeder</li>
+      <li>WoundHealing_SuperFast</li>
+      <li>Superclotting</li>
+      <li>PsychicAbility_Enhanced</li>
+      <li>UVSensitivity_Mild</li>
+      <li>LowSleep</li>
+      <li>Body_FemaleOnly</li>
+      <li>Libido_High</li>
+      <li>Fertile</li>
+      <li>Eyes_Red</li>
+      <li>DZ_CentaurEars</li>
+      <li>Body_Standard</li>
+      <li>Hair_InkBlack</li>
+      <li>Skin_SheerWhite</li>
+      <li>Skin_LightGray</li>
+      <li>Skin_SlateGray</li>
+      <li>Skin_InkBlack</li>
+      <li>DarkVision</li>
+      <li>Hair_Grayless</li>
+      <li>AptitudePoor_Cooking</li>
+      <li>AptitudePoor_Plants</li>
+      <li>Mood_Pessimist</li>
+      <li>DZ_CentaurBody_Light</li>
+      <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
+      <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+      <li>Ageless</li>
+    </genes>
+  </XenotypeDef>
+
+</Defs>

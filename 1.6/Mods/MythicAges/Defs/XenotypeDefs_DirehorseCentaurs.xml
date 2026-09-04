@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <XenotypeDef>
+    <defName>DZ_DireCentaur</defName>
+    <label>dire centaur</label>
+    <description>Centaurs grown from the direhorse megafuana. Larger and stronger the normal centaurs.</description>
+    <iconPath>BSCE/Icons/Direhorse</iconPath>
+    <inheritable>true</inheritable>
+    <displayPriority>301</displayPriority>
+    <genes>
+      <li>PsychicAbility_Dull</li>
+      <li>MinTemp_SmallDecrease</li>
+      <li>Aggression_HyperAggressive</li>
+      <li>MeleeDamage_Strong</li>
+      <li>Body_Standard</li>
+      <li>Body_Hulk</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>AptitudeRemarkable_Melee</li>
+      <li>AptitudeStrong_Construction</li>
+      <li>AptitudeStrong_Plants</li>
+      <li>AptitudeStrong_Animals</li>
+      <li>AptitudeTerrible_Crafting</li>
+      <li>AptitudeTerrible_Artistic</li>
+      <li>AptitudeTerrible_Intellectual</li>
+      <li>DZ_CentaurEars</li>
+      <li>DZ_CentaurBody_Direhorse</li>
+      <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
+      <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>DZ_WoolyCentaur</defName>
+    <label>wooly centaur</label>
+    <description>A cold-adapted centaur lineage ofshoot from the direhose centaur. They are large and stronger than even direhorse centaurs.</description>
+    <iconPath>BSCE/Icons/Direhorse_White</iconPath>
+    <inheritable>true</inheritable>
+    <displayPriority>302</displayPriority>
+    <genes>
+      <li>PsychicAbility_Deaf</li>
+      <li>NakedSpeed</li>
+      <li>MinTemp_LargeDecrease</li>
+      <li>MaxTemp_SmallDecrease</li>
+      <li>FireTerror</li>
+      <li>Aggression_HyperAggressive</li>
+      <li>MeleeDamage_Strong</li>
+      <li>Pain_Reduced</li>
+      <li>Body_Standard</li>
+      <li>Body_Hulk</li>
+      <li>Furskin</li>
+      <li>DZ_CentaurAnimalNose</li>
+      <li>Unstoppable</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>AptitudeRemarkable_Melee</li>
+      <li>AptitudeStrong_Construction</li>
+      <li>AptitudeStrong_Mining</li>
+      <li>AptitudeStrong_Plants</li>
+      <li>AptitudeStrong_Animals</li>
+      <li>AptitudeTerrible_Social</li>
+      <li>AptitudeTerrible_Intellectual</li>
+      <li>DZ_CentaurEars</li>
+      <li>DZ_CentaurBody_Wooly</li>
+      <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
+      <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+    </genes>
+  </XenotypeDef>
+
+</Defs>

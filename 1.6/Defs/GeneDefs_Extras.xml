@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GeneDef ParentName="GeneNoseBase">
+    <defName>DZ_CentaurAnimalNose</defName>
+    <label>canine nose</label>
+    <description>Carriers of this gene have wolf-like noses.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_CentaurAnimalNose</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>410.1</displayOrderInCategory>
+  </GeneDef>
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>DZ_CentaurEars</defName>
+    <label>centaur ears</label>
+    <description>Carriers of this gene have long, downturned equine ears.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_CentaurEars</iconPath>
+    <displayOrderInCategory>75</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/CentaurEars/centaur_ears</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>64</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>horse</symbol></li>
+        <li><symbol>flick</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>ear</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+    <defName>DZ_CentaurAnimalNose</defName>
+    <texPath>DZ_CentaurAnimalNose</texPath>
+    <probability>1</probability>
+    <shader>Map/CutoutSkin</shader>
+    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+    <targetGeneDefs>
+      <li>DZ_CentaurAnimalNose</li>
+    </targetGeneDefs>
+  </FacialAnimation.HeadTypeDef>
+</Defs>
