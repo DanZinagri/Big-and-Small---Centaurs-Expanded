@@ -56,6 +56,7 @@
     <inheritable>true</inheritable>
     <displayPriority>300</displayPriority>
     <genes>
+      <li>Body_FemaleOnly</li>
       <li>Ageless</li>
       <li>ArchiteMetabolism</li>
       <li>DiseaseFree</li>
@@ -69,11 +70,13 @@
       <li>Skin_Blue</li>
       <li>Skin_SheerWhite</li>
       <li>AptitudePoor_Shooting</li>
+      <li>AptitudePoor_Construction</li>
       <li>AptitudeTerrible_Melee</li>
       <li>AptitudeStrong_Animals</li>
       <li>AptitudeStrong_Artistic</li>
-      <li>AptitudeStrong_Medicine</li>
       <li>AptitudeRemarkable_Social</li>
+      <li>DZ_UnicornBlessing</li>
+      <li>DZ_UnicornMending</li>
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody_Light</li>
       <li>DZ_CentaurNose</li>
@@ -105,7 +108,7 @@
       <li>Libido_High</li>
       <li>Fertile</li>
       <li>Eyes_Red</li>
-      <li>DZ_CentaurEars</li>
+      <li>DZ_NightmareEars</li>
       <li>Body_Standard</li>
       <li>Hair_InkBlack</li>
       <li>Skin_SheerWhite</li>

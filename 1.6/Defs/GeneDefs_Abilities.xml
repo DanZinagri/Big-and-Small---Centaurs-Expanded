@@ -27,4 +27,54 @@
     </symbolPack>
   </GeneDef>
 
+  <GeneDef>
+    <defName>DZ_UnicornBlessing</defName>
+    <label>unicorn blessing</label>
+    <description>Carriers can touch an ally with a calming radiance that sharpens the mind and lifts the spirit for a couple of hours.</description>
+    <iconPath>BSCE/Abilities/Unicorn</iconPath>
+    <displayCategory>Ability</displayCategory>
+    <marketValueFactor>1.3</marketValueFactor>
+    <abilities>
+      <li>DZ_UnicornBlessing</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>DZ_UnicornBlessing</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>bless</symbol></li>
+        <li><symbol>grace</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touch</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>DZ_UnicornMending</defName>
+    <label>unicorn mending</label>
+    <description>Carriers can touch an ally with a restorative radiance that doubles wound healing and immunity gain for six hours.</description>
+    <iconPath>BSCE/Abilities/UnicornMend</iconPath>
+    <displayCategory>Ability</displayCategory>
+    <marketValueFactor>1.3</marketValueFactor>
+    <abilities>
+      <li>DZ_UnicornMending</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>DZ_UnicornMending</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>mend</symbol></li>
+        <li><symbol>heal</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
 </Defs>

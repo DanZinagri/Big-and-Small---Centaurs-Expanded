@@ -51,4 +51,37 @@
       </suffixSymbols>
     </symbolPack>
   </GeneDef>
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>DZ_NightmareEars</defName>
+    <label>nightmare ears</label>
+    <description>Carriers of this gene have the sharp, upright ears of a nightmare.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_NightmareEars</iconPath>
+    <displayOrderInCategory>76</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/NightmareEars/nightmare_ears</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>64</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>night</symbol></li>
+        <li><symbol>dread</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>ear</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
 </Defs>
