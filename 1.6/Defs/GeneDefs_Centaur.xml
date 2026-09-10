@@ -20,9 +20,219 @@
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
         <thingDefSwap>BS_Centaur</thingDefSwap>
+        <renderCacheOff>true</renderCacheOff>
       </li>
-      <li Class="BigAndSmall.Flagger"><flags><ShowBaseAbdomen/></flags></li>
     </modExtensions>
+    <renderNodeProperties>
+      <!-- default body types -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <li>RaceDefaults/Centaur/BS_Centaur</li>
+            <MaleBody_Fat>BS_Blank</MaleBody_Fat>
+            <FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+            <NoneBody_Fat>BS_Blank</NoneBody_Fat>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.48)</offset>
+            <layer>89.5</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0.08)</offset>
+            <layer>89.5</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <li>RaceDefaults/Centaur/BS_CentaurBack</li>
+            <MaleBody_Fat>BS_Blank</MaleBody_Fat>
+            <FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+            <NoneBody_Fat>BS_Blank</NoneBody_Fat>
+          </texturePaths>
+          <colorA>
+            <replaceFlagsAndInactive><CentaurColorA/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <replaceFlagsAndInactive><CentaurColorB/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <visibleFacing><li>South</li></visibleFacing>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataSouth>
+            <offset>(0, 0.000, 0.08)</offset>
+            <layer>-4</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+      <!-- Fat: own offsets (z -0.15, x -0.05E/+0.05W vs default) -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Fat>RaceDefaults/Centaur/BS_Centaur</MaleBody_Fat>
+            <FemaleBody_Fat>RaceDefaults/Centaur/BS_Centaur</FemaleBody_Fat>
+            <NoneBody_Fat>RaceDefaults/Centaur/BS_Centaur</NoneBody_Fat>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.7)</offset>
+            <layer>89.5</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0)</offset>
+            <layer>89.5</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.49, 0.0, -0.25)</offset>
+            <layer>89.5</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.49, 0.0, -0.25)</offset>
+            <layer>89.5</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Fat>RaceDefaults/Centaur/BS_CentaurBack</MaleBody_Fat>
+            <FemaleBody_Fat>RaceDefaults/Centaur/BS_CentaurBack</FemaleBody_Fat>
+            <NoneBody_Fat>RaceDefaults/Centaur/BS_CentaurBack</NoneBody_Fat>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <replaceFlagsAndInactive><CentaurColorA/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <replaceFlagsAndInactive><CentaurColorB/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <skinColor>true</skinColor>
+          </colorB>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <visibleFacing><li>South</li></visibleFacing>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataSouth>
+            <offset>(0, 0.000, 0)</offset>
+            <layer>-4</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
   </GeneDef>
 
   <GeneDef ParentName="DZ_CentaurBody_Base">
