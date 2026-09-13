@@ -21,6 +21,14 @@
       <li Class="BigAndSmall.PawnExtension">
         <thingDefSwap>BS_Centaur</thingDefSwap>
         <renderCacheOff>true</renderCacheOff>
+        <bodyDrawData>
+          <dataEast>
+            <offset>(0.5, 0, 0)</offset>
+          </dataEast>
+          <dataNorth>
+            <offset>(0, 0, 0.15)</offset>
+          </dataNorth>
+        </bodyDrawData>
       </li>
     </modExtensions>
     <renderNodeProperties>
