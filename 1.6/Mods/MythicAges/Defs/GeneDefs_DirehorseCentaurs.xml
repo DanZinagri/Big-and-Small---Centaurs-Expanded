@@ -301,7 +301,7 @@ Produces 30 direhorse wool every 25 days, modified by body size.</description>
       </li>
     </modExtensions>
     <statFactors>
-      <SM_BodySizeMultiplier>1.30</SM_BodySizeMultiplier>
+      <SM_BodySizeMultiplier>1.4</SM_BodySizeMultiplier>
       <ConstructionSpeed>1.05</ConstructionSpeed>
     </statFactors>
   </GeneDef>
@@ -325,7 +325,7 @@ Produces 30 direhorse wool every 20 days, modified by body size.</description>
       </li>
     </modExtensions>
     <statFactors>
-      <SM_BodySizeMultiplier>1.80</SM_BodySizeMultiplier>
+      <SM_BodySizeMultiplier>1.70</SM_BodySizeMultiplier>
       <ConstructionSpeed>1.10</ConstructionSpeed>
     </statFactors>
   </GeneDef>
