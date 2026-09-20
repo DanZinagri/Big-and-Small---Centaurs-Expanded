@@ -28,6 +28,7 @@
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+      <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
     </genes>
   </XenotypeDef>
 
@@ -64,6 +65,7 @@
       <li>DZ_CentaurBody_Wooly</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+      <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
     </genes>
   </XenotypeDef>
 

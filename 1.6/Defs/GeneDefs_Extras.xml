@@ -84,4 +84,85 @@
       </suffixSymbols>
     </symbolPack>
   </GeneDef>
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>DZ_ThrumboHorn</defName>
+    <label>thrumbo-horn</label>
+    <description>Carriers of this gene grow a thrumbo horn protruding from the center of the forehead.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_ThrumboHorn</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <applyPartHediff>
+          <li>
+            <hediff>DZ_ThrumboHorn</hediff>
+            <bodyparts>
+              <li>Head</li>
+            </bodyparts>
+          </li>
+        </applyPartHediff>
+      </li>
+    </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/ThrumboHorn/DZ_ThrumboHorn</texPath>
+        <color>(255, 255, 255)</color>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>10</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>80</layer>
+          </dataSouth>
+          <dataNorth>
+            <layer>80</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>thrumbo</symbol>
+          <weight>2</weight>
+        </li>
+        <li><symbol>horn</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <HediffDef>
+    <defName>DZ_ThrumboHorn</defName>
+    <label>thrumbo-horn</label>
+    <description>A heavy spiral horn of thrumbo stock, grown from the center of the forehead. Solid enough to drive through armor with a lowered head.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>horn</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>14</power>
+            <chanceFactor>0.7</chanceFactor>
+            <cooldownTime>2.0</cooldownTime>
+            <armorPenetration>0.2</armorPenetration>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <addedPartProps>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
 </Defs>

@@ -22,6 +22,7 @@
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+      <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
     </genes>
   </XenotypeDef>
 
@@ -82,6 +83,7 @@
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+      <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
     </genes>
   </XenotypeDef>
 
@@ -125,6 +127,47 @@
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
       <li>Ageless</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>DZ_Thrumboran</defName>
+    <label>thrumboran</label>
+    <description>A centaur lineage grown from thrumbo stock. Towering, shaggy and pale, they carry a heavy spiral horn on the brow and the cold-weather bulk of the beast they were cut from.</description>
+    <iconPath>BSCE/Icons/Thrumbo</iconPath>
+    <inheritable>true</inheritable>
+    <displayPriority>304</displayPriority>
+    <genes>
+      <li>ArchiteMetabolism</li>
+      <li>DiseaseFree</li>
+      <li>Hair_Grayless</li>
+
+      <li>DZ_Hair_Thrumbo</li>
+      <li>DZ_Skin_Thrumbo</li>
+      <li>DZ_ThrumboHorn</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">DZ_ThrumboRoar</li>
+      <li>Body_Standard</li>
+      <li>DZ_CentaurBody_Thrumbo</li>
+      <li>DZ_CentaurEars</li>
+      <li>DZ_CentaurNose</li>
+
+      <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
+      <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+      <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
+
+      <li>PsychicAbility_Extreme</li>
+      <li>MoveSpeed_Slow</li>
+      <li>NakedSpeed</li>
+      <li>MinTemp_SmallDecrease</li>
+      <li>Aggression_Aggressive</li>
+      <li>MeleeDamage_Strong</li>
+      <li>Pain_Reduced</li>
+      <li>Unstoppable</li>
+      <li>AptitudeStrong_Melee</li>
+      <li>AptitudeStrong_Plants</li>
+      <li>AptitudePoor_Crafting</li>
+      <li>AptitudeTerrible_Artistic</li>
+      <li>AptitudePoor_Social</li>
     </genes>
   </XenotypeDef>
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef>
+    <defName>DZ_ThrumboRoar</defName>
+    <label>thrumbo roar</label>
+    <description>Carriers can release a powerful roar that leaves nearby hostiles trembling, slowing their movement and fouling their aim.</description>
+    <iconPath>UI/Commands/WarTrumpet</iconPath>
+    <displayCategory>Ability</displayCategory>
+    <marketValueFactor>1.5</marketValueFactor>
+    <abilities>
+      <li>DZ_ThrumboRoar</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>DZ_ThrumboRoar</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>thrumbo</symbol></li>
+        <li><symbol>roar</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>bellow</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+</Defs>
