@@ -4,6 +4,7 @@
     <li>/</li>
     <li>1.6</li>
     <li IfModNotActive="RedMattis.BigSmall.Core">1.6/Mods/NoGenesAndMore</li>
+    <li IfModActive="RedMattis.BigSmall.Core">1.6/Mods/GenesAndMore</li>
     <li IfModNotActive="Nals.FacialAnimation">1.6/Mods/NoFacialAnimation</li>
     <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/NoVTEFacialAnimation</li>
     <li IfModActive="veterano.mythicages.megafaunabestiary">1.6/Mods/MythicAges</li>
