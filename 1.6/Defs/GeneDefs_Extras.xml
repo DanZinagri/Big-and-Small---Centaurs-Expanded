@@ -91,6 +91,13 @@
     <iconPath>UI/Icons/Genes/Gene_DZ_ThrumboHorn</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
+    <!-- Not randomChosen, despite GeneHeadboneBase. Random-chosen genes are skipped by
+         Pawn_GeneTracker.CheckForOverrides, so when a morph swaps one horn for another the
+         incoming gene can stay flagged as overridden by a gene that no longer exists, and only
+         a reload clears it. Opting out puts these on the path that recomputes on every add and
+         remove. Safe because biostatCpx/biostatMet are non-zero, so GeneDef.RandomChosen
+         resolves to false, and because these horns are always granted explicitly. -->
+    <randomChosen>false</randomChosen>
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
         <applyPartHediff>

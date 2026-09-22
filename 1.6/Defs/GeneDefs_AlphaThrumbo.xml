@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <!-- Alpha thrumboran. Only ever reached through the coming-of-age morph on
+       DZ_CentaurBody_Thrumbo, never rolled into a xenotype directly.
+       Body art is the plain thrumbo set for now; swap the eight BSCE/ThrumboBody paths
+       below when dedicated textures exist. The horn carries its own hediff rather than the
+       shared DZ_ThrumboHorn one, so an alpha bull hits slightly harder. -->
+
   <GeneDef ParentName="BS_BodySwitchNonExclusive">
-    <defName>DZ_CentaurBody_Thrumbo</defName>
-    <label>thrumboran body</label>
-    <description>Carriers of this gene have the four-legged lower body of a thrumbo in place of regular human legs. The heavy shaggy frame dwarfs even a wooly direhorse lineage.</description>
-    <displayOrderInCategory>802</displayOrderInCategory>
+    <defName>DZ_CentaurBody_AlphaThrumbo</defName>
+    <label>alpha thrumboran body</label>
+    <description>Carriers of this gene have the four-legged lower body of an alpha thrumbo in place of regular human legs. Rare throwbacks to the bulls that lead a herd.</description>
+    <!-- Must sort BEFORE DZ_CentaurBody_Thrumbo (802). The morph adds this gene while the
+         thrumbo body is still present, and GeneUtility.Overrides breaks the tie between two
+         conflicting endogenes on GenesInOrder index, i.e. displayOrderInCategory, lowest wins.
+         If this gene loses that tie it is inactive when B&S's Gene.PostAdd hook runs, so it
+         never requests thingDefSwap BS_Centaur, while the outgoing gene, still active, releases
+         it. The pawn then silently drops off the centaur race, losing its baseBodySize and the
+         centauroid race hediff, and a reload does not repair it. -->
+    <displayOrderInCategory>801.2</displayOrderInCategory>
     <statOffsets>
       <CarryingCapacity>50</CarryingCapacity>
-      <SM_BodySizeOffset>0.5</SM_BodySizeOffset>
+      <SM_BodySizeOffset>0.55</SM_BodySizeOffset>
     </statOffsets>
     <statFactors>
-      <MoveSpeed>1.0</MoveSpeed>
-      <CarryingCapacity>1.5</CarryingCapacity>
-      <SM_BodySizeMultiplier>1.70</SM_BodySizeMultiplier>
+      <MoveSpeed>0.9</MoveSpeed>
+      <CarryingCapacity>1.6</CarryingCapacity>
+      <SM_BodySizeMultiplier>2.2</SM_BodySizeMultiplier>
       <ConstructionSpeed>1.10</ConstructionSpeed>
     </statFactors>
     <biostatCpx>0</biostatCpx>
@@ -36,45 +49,6 @@
             <offset>(0, 0, 0.15)</offset>
           </dataNorth>
         </bodyDrawData>
-        <!-- On reaching adulthood a thrumboran rolls once. Both outcomes stamp
-             DZ_ThrumboMorphResolved, which morphSettings disallows, so the roll cannot repeat
-             on later cache refreshes. A hediff rather than a gene because hediffs are not
-             inherited, so each new pawn starts unresolved.
-             Weights are literal percentages (they sum to 1). The Royal Thrumbos folder
-             rewrites the common branch to 0.75 and adds a 0.20 royal branch. -->
-        <morphSettings>
-          <morphOverAge>18</morphOverAge>
-          <disallowedHediffs>
-            <li>DZ_ThrumboMorphResolved</li>
-          </disallowedHediffs>
-        </morphSettings>
-        <morphTargets>
-
-          <li>
-            <!-- stays common. Identified by having no removeGenes; the royal patch keys on that. -->
-            <morphWeight>0.95</morphWeight>
-            <hediffs>
-              <li>DZ_ThrumboMorphResolved</li>
-            </hediffs>
-          </li>
-
-          <li>
-            <!-- grows into an alpha bull. Keeps the thrumbo hair and skin colour. -->
-            <morphWeight>0.05</morphWeight>
-            <hediffs>
-              <li>DZ_ThrumboMorphResolved</li>
-            </hediffs>
-            <removeGenes>
-              <li>DZ_CentaurBody_Thrumbo</li>
-              <li>DZ_ThrumboHorn</li>
-            </removeGenes>
-            <endoGenes>
-              <li>DZ_CentaurBody_AlphaThrumbo</li>
-              <li>DZ_AlphaThrumboHorn</li>
-            </endoGenes>
-          </li>
-
-        </morphTargets>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -297,23 +271,94 @@
     </renderNodeProperties>
   </GeneDef>
 
-  <GeneDef ParentName="GeneHairColorBase">
-    <defName>DZ_Hair_Thrumbo</defName>
-    <label>thrumbo-white hair</label>
-    <description>Carriers of this gene grow the pale blue-white pelt of a thrumbo.</description>
-    <hairColorOverride>(233, 241, 255)</hairColorOverride>
-    <randomBrightnessFactor>0</randomBrightnessFactor>
-    <displayOrderInCategory>135</displayOrderInCategory>
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>DZ_AlphaThrumboHorn</defName>
+    <label>alpha thrumbo-horn</label>
+    <description>Carriers of this gene grow the broad, forward-swept horns of an alpha thrumbo bull.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_AlphaThrumboHorn</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <!-- Not randomChosen, despite GeneHeadboneBase. Random-chosen genes are skipped by
+         Pawn_GeneTracker.CheckForOverrides, so when a morph swaps one horn for another the
+         incoming gene can stay flagged as overridden by a gene that no longer exists, and only
+         a reload clears it. Opting out puts these on the path that recomputes on every add and
+         remove. Safe because biostatCpx/biostatMet are non-zero, so GeneDef.RandomChosen
+         resolves to false, and because these horns are always granted explicitly. -->
+    <randomChosen>false</randomChosen>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <applyPartHediff>
+          <li>
+            <hediff>DZ_AlphaThrumboHorn</hediff>
+            <bodyparts>
+              <li>Head</li>
+            </bodyparts>
+          </li>
+        </applyPartHediff>
+      </li>
+    </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/AlphaThrumboHorn/DZ_AlphaThrumboHorn</texPath>
+        <color>(255, 255, 255)</color>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>10</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>80</layer>
+          </dataSouth>
+          <dataNorth>
+            <layer>80</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>alpha</symbol>
+          <weight>2</weight>
+        </li>
+        <li><symbol>horn</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
   </GeneDef>
 
-  <GeneDef ParentName="GeneSkinColorOverride">
-    <defName>DZ_Skin_Thrumbo</defName>
-    <label>thrumbo-pale skin</label>
-    <labelShortAdj>pale</labelShortAdj>
-    <description>Carriers of this gene have the cold grey-white skin of thrumbo stock.</description>
-    <skinColorOverride>(197, 204, 220)</skinColorOverride>
-    <randomBrightnessFactor>0</randomBrightnessFactor>
-    <displayOrderInCategory>94</displayOrderInCategory>
-  </GeneDef>
+  <!-- Copy of DZ_ThrumboHorn with the numbers nudged up: power 14 -> 16, armor penetration
+       0.20 -> 0.22. Cooldown is unchanged so the alpha is not faster, only heavier. -->
+  <HediffDef>
+    <defName>DZ_AlphaThrumboHorn</defName>
+    <label>alpha thrumbo-horn</label>
+    <description>The broad, forward-swept horns of an alpha thrumbo bull. Thicker at the base than common thrumbo stock and driven by considerably more mass.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>horn</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>16</power>
+            <chanceFactor>0.7</chanceFactor>
+            <cooldownTime>2.0</cooldownTime>
+            <armorPenetration>0.22</armorPenetration>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <addedPartProps>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
 
 </Defs>

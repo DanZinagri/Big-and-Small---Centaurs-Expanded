@@ -12,6 +12,7 @@
     <li IfModActive="tug.Minotaur.Expanded">1.6/Mods/RoosMinotaur</li>
     <li IfModActive="Euterpe.MilkyTitfuck">1.6/Mods/LactationExpansion</li>
     <li IfModActive="Ludeon.RimWorld.Odyssey">1.6/Mods/Odyssey</li>
+    <li IfModActive="Mlie.RoyalThrumbos">1.6/Mods/RoyalThrumbos</li>
     <li IfModActive="DanZinagri.AtavismLibraries">1.6/Mods/Atavism</li>
   </v1.6>
 </loadFolders>

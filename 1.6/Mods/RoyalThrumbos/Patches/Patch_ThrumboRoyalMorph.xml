@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- The coming-of-age morph itself lives on DZ_CentaurBody_Thrumbo and always exists.
+       This folder only reweights it and bolts on the royal outcome, taking the odds from
+       95 common / 5 alpha to 75 common / 20 royal / 5 alpha. -->
+
+  <!-- The common branch is the only target with no removeGenes, so this keys on shape rather
+       than position and survives the list being reordered. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo"]/modExtensions/li[@Class="BigAndSmall.PawnExtension"]/morphTargets/li[not(removeGenes)]/morphWeight</xpath>
+    <value>
+      <morphWeight>0.75</morphWeight>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo"]/modExtensions/li[@Class="BigAndSmall.PawnExtension"]/morphTargets</xpath>
+    <value>
+      <li>
+        <!-- grows into royal stock. Swaps the hair to cream and adds Furskin, which the
+             alpha branch does not. -->
+        <morphWeight>0.20</morphWeight>
+        <hediffs>
+          <li>DZ_ThrumboMorphResolved</li>
+        </hediffs>
+        <removeGenes>
+          <li>DZ_CentaurBody_Thrumbo</li>
+          <li>DZ_ThrumboHorn</li>
+          <li>DZ_Hair_Thrumbo</li>
+          <li>DZ_CentaurNose</li>
+        </removeGenes>
+        <endoGenes>
+          <li>DZ_CentaurBody_RoyalThrumbo</li>
+          <li>DZ_RoyalThrumboHorn</li>
+          <li>DZ_Hair_RoyalThrumbo</li>
+          <li>DZ_CentaurAnimalNose</li>
+          <li>Furskin</li>
+        </endoGenes>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>
