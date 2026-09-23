@@ -36,45 +36,6 @@
             <offset>(0, 0, 0.15)</offset>
           </dataNorth>
         </bodyDrawData>
-        <!-- On reaching adulthood a thrumboran rolls once. Both outcomes stamp
-             DZ_ThrumboMorphResolved, which morphSettings disallows, so the roll cannot repeat
-             on later cache refreshes. A hediff rather than a gene because hediffs are not
-             inherited, so each new pawn starts unresolved.
-             Weights are literal percentages (they sum to 1). The Royal Thrumbos folder
-             rewrites the common branch to 0.75 and adds a 0.20 royal branch. -->
-        <morphSettings>
-          <morphOverAge>18</morphOverAge>
-          <disallowedHediffs>
-            <li>DZ_ThrumboMorphResolved</li>
-          </disallowedHediffs>
-        </morphSettings>
-        <morphTargets>
-
-          <li>
-            <!-- stays common. Identified by having no removeGenes; the royal patch keys on that. -->
-            <morphWeight>0.95</morphWeight>
-            <hediffs>
-              <li>DZ_ThrumboMorphResolved</li>
-            </hediffs>
-          </li>
-
-          <li>
-            <!-- grows into an alpha bull. Keeps the thrumbo hair and skin colour. -->
-            <morphWeight>0.05</morphWeight>
-            <hediffs>
-              <li>DZ_ThrumboMorphResolved</li>
-            </hediffs>
-            <removeGenes>
-              <li>DZ_CentaurBody_Thrumbo</li>
-              <li>DZ_ThrumboHorn</li>
-            </removeGenes>
-            <endoGenes>
-              <li>DZ_CentaurBody_AlphaThrumbo</li>
-              <li>DZ_AlphaThrumboHorn</li>
-            </endoGenes>
-          </li>
-
-        </morphTargets>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -314,6 +275,74 @@
     <skinColorOverride>(197, 204, 220)</skinColorOverride>
     <randomBrightnessFactor>0</randomBrightnessFactor>
     <displayOrderInCategory>94</displayOrderInCategory>
+  </GeneDef>
+
+  <!-- Carries the coming-of-age roll, nothing else. Every morph branch removes it, including the
+       one that changes nothing, so once a thrumboran has resolved no gene on the pawn has
+       morphSettings and Metamorphosis.HandleMetamorph early-exits before doing any work.
+       DZ_ThrumboMorphResolved is kept as a backstop: if this gene is ever re-granted, or a
+       removal is missed, the hediff still blocks a second roll.
+       Note this gene is not inherited once dropped, so colony-born thrumborans descend from
+       resolved parents and stay common; pawns the game generates always carry it and always roll.
+       No exclusionTags, so it never lands in an override window, and RandomChosen resolves to
+       false, so it is not exposed to the stale-override bug that affects the horn genes. -->
+  <GeneDef>
+    <defName>DZ_ThrumboAdultMorph</defName>
+    <label>unsettled lineage</label>
+    <description>This thrumboran has not yet finished growing. On reaching adulthood their bloodline settles, most often into common stock, occasionally into something rarer.</description>
+    <iconPath>BSCE/Icons/Thrumbo</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>805</displayOrderInCategory>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <randomChosen>false</randomChosen>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <selectionWeight>0</selectionWeight>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <morphSettings>
+          <!-- 13, not 18: Ageless ramps biological aging from 1.0 at 13 to 0.0 at 18.5,
+               so a thrumboran generated below 18 asymptotes just under the threshold and
+               would never resolve. 13 is where that ramp starts, so every pawn either
+               already qualifies or reaches it at full speed. -->
+          <morphOverAge>13</morphOverAge>
+          <disallowedHediffs>
+            <li>DZ_ThrumboMorphResolved</li>
+          </disallowedHediffs>
+        </morphSettings>
+        <morphTargets>
+
+          <li>
+            <!-- stays common. The only branch with no endoGenes; the royal patch keys on that. -->
+            <morphWeight>0.95</morphWeight>
+            <hediffs>
+              <li>DZ_ThrumboMorphResolved</li>
+            </hediffs>
+            <removeGenes>
+              <li>DZ_ThrumboAdultMorph</li>
+            </removeGenes>
+          </li>
+
+          <li>
+            <!-- grows into an alpha bull. Keeps the thrumbo hair and skin colour. -->
+            <morphWeight>0.05</morphWeight>
+            <hediffs>
+              <li>DZ_ThrumboMorphResolved</li>
+            </hediffs>
+            <removeGenes>
+              <li>DZ_ThrumboAdultMorph</li>
+              <li>DZ_CentaurBody_Thrumbo</li>
+              <li>DZ_ThrumboHorn</li>
+            </removeGenes>
+            <endoGenes>
+              <li>DZ_CentaurBody_AlphaThrumbo</li>
+              <li>DZ_AlphaThrumboHorn</li>
+            </endoGenes>
+          </li>
+
+        </morphTargets>
+      </li>
+    </modExtensions>
   </GeneDef>
 
 </Defs>

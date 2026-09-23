@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <!-- The coming-of-age morph itself lives on DZ_CentaurBody_Thrumbo and always exists.
-       This folder only reweights it and bolts on the royal outcome, taking the odds from
-       95 common / 5 alpha to 75 common / 20 royal / 5 alpha. -->
-
-  <!-- The common branch is the only target with no removeGenes, so this keys on shape rather
-       than position and survives the list being reordered. -->
+  <!-- The coming-of-age morph lives on DZ_ThrumboAdultMorph and always exists. This folder only
+       reweights it and bolts on the royal outcome, taking the odds from 95 common / 5 alpha to
+       75 common / 20 royal / 5 alpha. -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo"]/modExtensions/li[@Class="BigAndSmall.PawnExtension"]/morphTargets/li[not(removeGenes)]/morphWeight</xpath>
+    <xpath>Defs/GeneDef[defName="DZ_ThrumboAdultMorph"]/modExtensions/li[@Class="BigAndSmall.PawnExtension"]/morphTargets/li[not(endoGenes)]/morphWeight</xpath>
     <value>
       <morphWeight>0.75</morphWeight>
     </value>
   </Operation>
 
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo"]/modExtensions/li[@Class="BigAndSmall.PawnExtension"]/morphTargets</xpath>
+    <xpath>Defs/GeneDef[defName="DZ_ThrumboAdultMorph"]/modExtensions/li[@Class="BigAndSmall.PawnExtension"]/morphTargets</xpath>
     <value>
       <li>
         <!-- grows into royal stock. Swaps the hair to cream and adds Furskin, which the
@@ -25,6 +22,7 @@
           <li>DZ_ThrumboMorphResolved</li>
         </hediffs>
         <removeGenes>
+          <li>DZ_ThrumboAdultMorph</li>
           <li>DZ_CentaurBody_Thrumbo</li>
           <li>DZ_ThrumboHorn</li>
           <li>DZ_Hair_Thrumbo</li>
