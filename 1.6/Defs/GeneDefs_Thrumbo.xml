@@ -51,6 +51,12 @@
             <MaleBody_Fat>BS_Blank</MaleBody_Fat>
             <FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
             <NoneBody_Fat>BS_Blank</NoneBody_Fat>
+            <MaleBody_Hulk>BS_Blank</MaleBody_Hulk>
+            <FemaleBody_Hulk>BS_Blank</FemaleBody_Hulk>
+            <NoneBody_Hulk>BS_Blank</NoneBody_Hulk>
+            <MaleBody_Thin>BS_Blank</MaleBody_Thin>
+            <FemaleBody_Thin>BS_Blank</FemaleBody_Thin>
+            <NoneBody_Thin>BS_Blank</NoneBody_Thin>
           </texturePaths>
           <colorA>
             <hairColor>true</hairColor>
@@ -81,7 +87,7 @@
             <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
           </bodyTypeScales>
           <dataNorth>
-            <offset>(0, 0.000, -0.48)</offset>
+            <offset>(0, 0.000, -0.53)</offset>
             <layer>89.5</layer>
           </dataNorth>
           <dataSouth>
@@ -189,7 +195,7 @@
             <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
           </bodyTypeScales>
           <dataNorth>
-            <offset>(0, 0.000, -0.7)</offset>
+            <offset>(0, 0.000, -0.74)</offset>
             <layer>89.5</layer>
           </dataNorth>
           <dataSouth>
@@ -253,6 +259,129 @@
             <offset>(0, 0.000, 0)</offset>
             <layer>-4</layer>
           </dataSouth>
+        </drawData>
+      </li>
+      <!-- Hulk / Thin: own front nodes so they can take their own north offset. Neither vanilla
+           DrawData nor B&S supports a per-body-type offset, so these follow the Fat pattern.
+           The keys MUST stay gendered (MaleBody_X / FemaleBody_X / NoneBody_X): a bare Body_X gets
+           AdaptivePawnPath priority 10, which ties the <li> fallback on the default node and makes
+           GetPaths return both. Gendered keys get priority 100 and win outright.
+           Offsets are later multiplied by bodyGraphicScale.y (Male 0.9, Female 1, Thin 1,
+           Hulk 1.25, Fat 1) in PawnRenderNodeWorker_LazyCentaur, so Hulk -0.04 here = -0.05 world. -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Hulk>BSCE/ThrumboBody/BS_Thrumbo</MaleBody_Hulk>
+            <FemaleBody_Hulk>BSCE/ThrumboBody/BS_Thrumbo</FemaleBody_Hulk>
+            <NoneBody_Hulk>BSCE/ThrumboBody/BS_Thrumbo</NoneBody_Hulk>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.51)</offset>
+            <layer>89.5</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0.08)</offset>
+            <layer>89.5</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Thin>BSCE/ThrumboBody/BS_Thrumbo</MaleBody_Thin>
+            <FemaleBody_Thin>BSCE/ThrumboBody/BS_Thrumbo</FemaleBody_Thin>
+            <NoneBody_Thin>BSCE/ThrumboBody/BS_Thrumbo</NoneBody_Thin>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.46)</offset>
+            <layer>89.5</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0.08)</offset>
+            <layer>89.5</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.44, 0.0, -0.2)</offset>
+            <layer>89.5</layer>
+          </dataWest>
         </drawData>
       </li>
     </renderNodeProperties>
