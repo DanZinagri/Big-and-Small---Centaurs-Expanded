@@ -23,6 +23,8 @@
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
       <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
+
+      <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaHorse</li>
     </genes>
   </XenotypeDef>
 
@@ -46,6 +48,8 @@
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+
+      <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaHorse</li>
     </genes>
   </XenotypeDef>
 
@@ -84,6 +88,8 @@
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
       <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
+
+      <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaHorse</li>
     </genes>
   </XenotypeDef>
 
@@ -126,6 +132,8 @@
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+
+      <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaHorse</li>
       <li>Ageless</li>
     </genes>
   </XenotypeDef>
@@ -170,6 +178,8 @@
       <li>AptitudePoor_Crafting</li>
       <li>AptitudeTerrible_Artistic</li>
       <li>AptitudePoor_Social</li>
+
+      <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaThrumbo</li>
     </genes>
   </XenotypeDef>
 

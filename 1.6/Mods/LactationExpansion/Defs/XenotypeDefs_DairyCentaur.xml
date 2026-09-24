@@ -27,6 +27,8 @@
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
+
+      <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaHorse</li>
     </genes>
   </XenotypeDef>
 
