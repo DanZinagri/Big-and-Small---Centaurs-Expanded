@@ -7,7 +7,7 @@
        below when dedicated textures exist. The horn carries its own hediff rather than the
        shared DZ_ThrumboHorn one, so an alpha bull hits slightly harder. -->
 
-  <GeneDef ParentName="BS_BodySwitchNonExclusive">
+  <GeneDef Name="DZ_CentaurBody_AlphaThrumbo" ParentName="BS_BodySwitchNonExclusive">
     <defName>DZ_CentaurBody_AlphaThrumbo</defName>
     <label>alpha thrumboran body</label>
     <description>Carriers of this gene have the four-legged lower body of an alpha thrumbo in place of regular human legs. Rare throwbacks to the bulls that lead a herd.</description>

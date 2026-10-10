@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <GeneDef ParentName="BS_BodySwitchNonExclusive">
+  <GeneDef Name="DZ_CentaurBody_Thrumbo" ParentName="BS_BodySwitchNonExclusive">
     <defName>DZ_CentaurBody_Thrumbo</defName>
     <label>thrumboran body</label>
     <description>Carriers of this gene have the four-legged lower body of a thrumbo in place of regular human legs. The heavy shaggy frame dwarfs even a wooly direhorse lineage.</description>

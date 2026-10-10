@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <GeneDef ParentName="BS_BodySwitchNonExclusive">
+  <GeneDef Name="DZ_CentaurBody_RoyalThrumbo" ParentName="BS_BodySwitchNonExclusive">
     <defName>DZ_CentaurBody_RoyalThrumbo</defName>
     <label>royal thrumboran body</label>
     <description>Carriers of this gene have the four-legged lower body of a royal thrumbo in place of regular human legs. Even heavier and more richly furred than common thrumbo stock.</description>

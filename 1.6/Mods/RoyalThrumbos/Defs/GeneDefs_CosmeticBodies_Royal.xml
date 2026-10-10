@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef ParentName="DZ_CentaurBody_RoyalThrumbo">
+    <defName>DZ_CentaurBody_RoyalThrumbo_Cosmetic</defName>
+    <label>royal thrumboran body (cosmetic)</label>
+    <description>Carriers of this gene have the four-legged lower body of a royal thrumbo in place of regular human legs. This gene is purely cosmetic: it reshapes the body but grants none of the size, strength or speed of the full gene, and grows no wool.</description>
+    <displayOrderInCategory>814</displayOrderInCategory>
+    <!-- Cosmetic twin: inherits the render nodes and race swap, drops every stat. The two
+         Inherit="False" nodes are required: without them the parent's entries are kept.
+         biostatCpx is 1 on purpose. With all biostats at 0 a gene that has render nodes counts as
+         RandomChosen (GeneDef.RandomChosen), which takes it off Pawn_GeneTracker.CheckForOverrides
+         and would make it resolve conflicts differently from the stat-carrying body genes. -->
+    <statOffsets Inherit="False" />
+    <statFactors Inherit="False" />
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <!-- The parent is a ProductionGene (wool). Reset the class, and replace modExtensions outright
+         so ProductionGeneSettings is dropped too: B&S's description patch reads that extension
+         straight off the def and would still advertise wool. The PawnExtension below is therefore
+         a COPY of the one on DZ_CentaurBody_RoyalThrumbo. If you retune bodyDrawData there,
+         mirror it here. -->
+    <geneClass>Gene</geneClass>
+    <modExtensions Inherit="False">
+      <li Class="BigAndSmall.PawnExtension">
+        <thingDefSwap>BS_Centaur</thingDefSwap>
+        <renderCacheOff>true</renderCacheOff>
+        <bodyDrawData>
+          <dataEast>
+            <offset>(0.5, 0, 0)</offset>
+          </dataEast>
+          <dataNorth>
+            <offset>(0, 0, 0.15)</offset>
+          </dataNorth>
+        </bodyDrawData>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>
