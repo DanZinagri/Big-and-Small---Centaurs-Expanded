@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/XenotypeDef[defName="DZ_DairyCentaur"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs</xpath>
+      <value>
+
+        <AtavismLibraries.GeneticAtavismDef>
+          <defName>DZ_Atavism_Centaur_To_Dairy</defName>
+          <sourceXenotype>DZ_Centaur</sourceXenotype>
+          <targetXenotype>DZ_DairyCentaur</targetXenotype>
+          <chance>0.05</chance>
+          <InheritanceMode>excess</InheritanceMode>
+          <order>3</order>
+        </AtavismLibraries.GeneticAtavismDef>
+
+        <AtavismLibraries.GeneticAtavismDef>
+          <defName>DZ_Atavism_Dairy_To_Centaur</defName>
+          <sourceXenotype>DZ_DairyCentaur</sourceXenotype>
+          <targetXenotype>DZ_Centaur</targetXenotype>
+          <chance>0.05</chance>
+          <InheritanceMode>excess</InheritanceMode>
+          <order>0</order>
+        </AtavismLibraries.GeneticAtavismDef>
+
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Centaur_To_Nightmare</defName>
+    <sourceXenotype>DZ_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Nightmare_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>0</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Centaur_To_Unicorn</defName>
+    <sourceXenotype>DZ_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Unicorn_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>1</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Centaur_To_Racing</defName>
+    <sourceXenotype>DZ_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Racing_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>2</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Nightmare_To_Centaur</defName>
+    <sourceXenotype>DZ_Nightmare_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>0</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Nightmare_To_Unicorn</defName>
+    <sourceXenotype>DZ_Nightmare_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Unicorn_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>1</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Unicorn_To_Centaur</defName>
+    <sourceXenotype>DZ_Unicorn_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>0</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Unicorn_To_Nightmare</defName>
+    <sourceXenotype>DZ_Unicorn_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Nightmare_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>1</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+  <AtavismLibraries.GeneticAtavismDef>
+    <defName>DZ_Atavism_Racing_To_Centaur</defName>
+    <sourceXenotype>DZ_Racing_Centaur</sourceXenotype>
+    <targetXenotype>DZ_Centaur</targetXenotype>
+    <chance>0.05</chance>
+    <InheritanceMode>excess</InheritanceMode>
+    <order>0</order>
+  </AtavismLibraries.GeneticAtavismDef>
+
+</Defs>

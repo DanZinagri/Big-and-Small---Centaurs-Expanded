@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Adds thrumborans to the pool the 'wild man wanders in' event draws from.
+       Same collision-safe shape Muriden, Roo's Minotaur and the Xeno Hive all use: merge into
+       the existing xenotypeChances if another mod already created the node, otherwise build it.
+       Chances here are absolute; whatever is left over falls through to Baseliner. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="WildMan"]/xenotypeSet</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="WildMan"]/xenotypeSet/xenotypeChances</xpath>
+      <value>
+        <DZ_Thrumboran>0.05</DZ_Thrumboran>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="WildMan"]</xpath>
+      <value>
+        <xenotypeSet Inherit="True">
+          <xenotypeChances>
+            <DZ_Thrumboran>0.05</DZ_Thrumboran>
+          </xenotypeChances>
+        </xenotypeSet>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Alpha thrumboran. Only ever reached through the coming-of-age morph on
+       DZ_CentaurBody_Thrumbo, never rolled into a xenotype directly.
+       Body art is the plain thrumbo set for now; swap the eight BSCE/ThrumboBody paths
+       below when dedicated textures exist. The horn carries its own hediff rather than the
+       shared DZ_ThrumboHorn one, so an alpha bull hits slightly harder. -->
+
+  <GeneDef Name="DZ_CentaurBody_AlphaThrumbo" ParentName="BS_BodySwitchNonExclusive">
+    <defName>DZ_CentaurBody_AlphaThrumbo</defName>
+    <label>alpha thrumboran body</label>
+    <description>Carriers of this gene have the four-legged lower body of an alpha thrumbo in place of regular human legs. Rare throwbacks to the bulls that lead a herd.</description>
+    <!-- Must sort BEFORE DZ_CentaurBody_Thrumbo (802). The morph adds this gene while the
+         thrumbo body is still present, and GeneUtility.Overrides breaks the tie between two
+         conflicting endogenes on GenesInOrder index, i.e. displayOrderInCategory, lowest wins.
+         If this gene loses that tie it is inactive when B&S's Gene.PostAdd hook runs, so it
+         never requests thingDefSwap BS_Centaur, while the outgoing gene, still active, releases
+         it. The pawn then silently drops off the centaur race, losing its baseBodySize and the
+         centauroid race hediff, and a reload does not repair it. -->
+    <displayOrderInCategory>801.2</displayOrderInCategory>
+    <statOffsets>
+      <CarryingCapacity>50</CarryingCapacity>
+      <SM_BodySizeOffset>0.55</SM_BodySizeOffset>
+    </statOffsets>
+    <statFactors>
+      <MoveSpeed>0.9</MoveSpeed>
+      <CarryingCapacity>1.6</CarryingCapacity>
+      <SM_BodySizeMultiplier>2.2</SM_BodySizeMultiplier>
+      <ConstructionSpeed>1.10</ConstructionSpeed>
+    </statFactors>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <randomChosen>false</randomChosen>
+    <iconPath>BSCE/Icons/Thrumbo</iconPath>
+    <exclusionTags>
+      <li>Bug_BodyAttachment</li>
+      <li>taur</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <thingDefSwap>BS_Centaur</thingDefSwap>
+        <renderCacheOff>true</renderCacheOff>
+        <bodyDrawData>
+          <dataEast>
+            <offset>(0.5, 0, 0)</offset>
+          </dataEast>
+          <dataNorth>
+            <offset>(0, 0, 0.15)</offset>
+          </dataNorth>
+        </bodyDrawData>
+      </li>
+    </modExtensions>
+    <renderNodeProperties>
+      <!-- default body types -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <li>BSCE/ThrumboBody/BS_Thrumbo</li>
+            <MaleBody_Fat>BS_Blank</MaleBody_Fat>
+            <FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+            <NoneBody_Fat>BS_Blank</NoneBody_Fat>
+            <MaleBody_Hulk>BS_Blank</MaleBody_Hulk>
+            <FemaleBody_Hulk>BS_Blank</FemaleBody_Hulk>
+            <NoneBody_Hulk>BS_Blank</NoneBody_Hulk>
+            <MaleBody_Thin>BS_Blank</MaleBody_Thin>
+            <FemaleBody_Thin>BS_Blank</FemaleBody_Thin>
+            <NoneBody_Thin>BS_Blank</NoneBody_Thin>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.53)</offset>
+            <layer>79</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0.08)</offset>
+            <layer>45</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.44, 0.0, -0.2)</offset>
+            <layer>45</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.44, 0.0, -0.2)</offset>
+            <layer>45</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <li>BSCE/ThrumboBody/BS_ThrumboBack</li>
+            <MaleBody_Fat>BS_Blank</MaleBody_Fat>
+            <FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+            <NoneBody_Fat>BS_Blank</NoneBody_Fat>
+          </texturePaths>
+          <colorA>
+            <replaceFlagsAndInactive><CentaurColorA/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <replaceFlagsAndInactive><CentaurColorB/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <visibleFacing><li>South</li></visibleFacing>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataSouth>
+            <offset>(0, 0.000, 0.08)</offset>
+            <layer>-4</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+      <!-- Fat: own offsets (z -0.15, x -0.05E/+0.05W vs default) -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Fat>BSCE/ThrumboBody/BS_Thrumbo</MaleBody_Fat>
+            <FemaleBody_Fat>BSCE/ThrumboBody/BS_Thrumbo</FemaleBody_Fat>
+            <NoneBody_Fat>BSCE/ThrumboBody/BS_Thrumbo</NoneBody_Fat>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.74)</offset>
+            <layer>79</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0)</offset>
+            <layer>45</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.49, 0.0, -0.25)</offset>
+            <layer>45</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.49, 0.0, -0.25)</offset>
+            <layer>45</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Fat>BSCE/ThrumboBody/BS_ThrumboBack</MaleBody_Fat>
+            <FemaleBody_Fat>BSCE/ThrumboBody/BS_ThrumboBack</FemaleBody_Fat>
+            <NoneBody_Fat>BSCE/ThrumboBody/BS_ThrumboBack</NoneBody_Fat>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <replaceFlagsAndInactive><CentaurColorA/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <replaceFlagsAndInactive><CentaurColorB/></replaceFlagsAndInactive>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <visibleFacing><li>South</li></visibleFacing>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataSouth>
+            <offset>(0, 0.000, 0)</offset>
+            <layer>-4</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+      <!-- Hulk / Thin: own front nodes so they can take their own north offset. Neither vanilla
+           DrawData nor B&S supports a per-body-type offset, so these follow the Fat pattern.
+           The keys MUST stay gendered (MaleBody_X / FemaleBody_X / NoneBody_X): a bare Body_X gets
+           AdaptivePawnPath priority 10, which ties the <li> fallback on the default node and makes
+           GetPaths return both. Gendered keys get priority 100 and win outright.
+           Offsets are later multiplied by bodyGraphicScale.y (Male 0.9, Female 1, Thin 1,
+           Hulk 1.25, Fat 1) in PawnRenderNodeWorker_LazyCentaur, so Hulk -0.04 here = -0.05 world. -->
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Hulk>BSCE/ThrumboBody/BS_Thrumbo</MaleBody_Hulk>
+            <FemaleBody_Hulk>BSCE/ThrumboBody/BS_Thrumbo</FemaleBody_Hulk>
+            <NoneBody_Hulk>BSCE/ThrumboBody/BS_Thrumbo</NoneBody_Hulk>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.51)</offset>
+            <layer>79</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0.08)</offset>
+            <layer>45</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.44, 0.0, -0.2)</offset>
+            <layer>45</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.44, 0.0, -0.2)</offset>
+            <layer>45</layer>
+          </dataWest>
+        </drawData>
+      </li>
+      <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+        <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+        <workerClass>BigAndSmall.PawnRenderNodeWorker_LazyCentaur</workerClass>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <conditionalGraphics>
+          <texturePaths>
+            <MaleBody_Thin>BSCE/ThrumboBody/BS_Thrumbo</MaleBody_Thin>
+            <FemaleBody_Thin>BSCE/ThrumboBody/BS_Thrumbo</FemaleBody_Thin>
+            <NoneBody_Thin>BSCE/ThrumboBody/BS_Thrumbo</NoneBody_Thin>
+            <default>BS_Blank</default>
+          </texturePaths>
+          <colorA>
+            <hairColor>true</hairColor>
+            <brightness>0.95</brightness>
+            <alts>
+              <li>
+                <triggers><li>Dead</li></triggers>
+                <hairColor>true</hairColor>
+                <skinColor>true</skinColor>
+                <saturation>0.6</saturation>
+              </li>
+            </alts>
+          </colorA>
+          <colorB>
+            <hairColor>true</hairColor>
+          </colorB>
+          <colorC>
+            <skinColor>true</skinColor>
+          </colorC>
+        </conditionalGraphics>
+        <drawSize>(1.3,1.3)</drawSize>
+        <drawData>
+          <bodyTypeScales>
+            <Fat>1.35</Fat>
+            <Hulk>1.1</Hulk>
+            <Thin>0.85</Thin>
+            <Child MayRequire="Ludeon.Rimworld.Biotech">0.85</Child>
+            <Baby MayRequire="Ludeon.Rimworld.Biotech">0.70</Baby>
+          </bodyTypeScales>
+          <dataNorth>
+            <offset>(0, 0.000, -0.46)</offset>
+            <layer>79</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.000, 0.08)</offset>
+            <layer>45</layer>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.44, 0.0, -0.2)</offset>
+            <layer>45</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.44, 0.0, -0.2)</offset>
+            <layer>45</layer>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>DZ_AlphaThrumboHorn</defName>
+    <label>alpha thrumbo-horn</label>
+    <description>Carriers of this gene grow the broad, forward-swept horns of an alpha thrumbo bull.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_AlphaThrumboHorn</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <!-- Not randomChosen, despite GeneHeadboneBase. Random-chosen genes are skipped by
+         Pawn_GeneTracker.CheckForOverrides, so when a morph swaps one horn for another the
+         incoming gene can stay flagged as overridden by a gene that no longer exists, and only
+         a reload clears it. Opting out puts these on the path that recomputes on every add and
+         remove. Safe because biostatCpx/biostatMet are non-zero, so GeneDef.RandomChosen
+         resolves to false, and because these horns are always granted explicitly. -->
+    <randomChosen>false</randomChosen>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <applyPartHediff>
+          <li>
+            <hediff>DZ_AlphaThrumboHorn</hediff>
+            <bodyparts>
+              <li>Head</li>
+            </bodyparts>
+          </li>
+        </applyPartHediff>
+      </li>
+    </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/AlphaThrumboHorn/DZ_AlphaThrumboHorn</texPath>
+        <color>(255, 255, 255)</color>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>10</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>80</layer>
+          </dataSouth>
+          <dataNorth>
+            <layer>80</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>alpha</symbol>
+          <weight>2</weight>
+        </li>
+        <li><symbol>horn</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <!-- Copy of DZ_ThrumboHorn with the numbers nudged up: power 14 -> 16, armor penetration
+       0.20 -> 0.22. Cooldown is unchanged so the alpha is not faster, only heavier. -->
+  <HediffDef>
+    <defName>DZ_AlphaThrumboHorn</defName>
+    <label>alpha thrumbo-horn</label>
+    <description>The broad, forward-swept horns of an alpha thrumbo bull. Thicker at the base than common thrumbo stock and driven by considerably more mass.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>horn</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>16</power>
+            <chanceFactor>0.7</chanceFactor>
+            <cooldownTime>2.0</cooldownTime>
+            <armorPenetration>0.22</armorPenetration>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <addedPartProps>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+</Defs>

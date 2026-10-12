@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Marks that this pawn's coming-of-age roll already happened. The morph conditions list it
+       under disallowedHediffs, so neither outcome can re-roll on later cache refreshes.
+       A hediff rather than a gene on purpose: genes would be inherited and would pre-resolve
+       the roll for the pawn's children. -->
+  <HediffDef>
+    <defName>DZ_ThrumboMorphResolved</defName>
+    <label>Settled thrumboran lineage</label>
+    <description>This thrumboran has finished growing into whichever form their bloodline favoured. If you're still a normal thrumbo and wanna try again just delete this headiff and the game will roll again.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+    <!-- A hediff with no stages is always Visible. Giving it one stage whose becomeVisible is
+         false hides it from the health tab entirely (Hediff.Visible returns CurStage.becomeVisible).
+         Dev mode can still reveal it: health tab gear menu -> "Show hidden Hediffs". -->
+    <stages>
+      <li>
+        <label>settled</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

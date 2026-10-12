@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>DZ_UnicornBlessing</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>DZ_UnicornBlessing</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>unicorn blessing</label>
+        <description>A unicorn touched me. Everything feels lighter, clearer, and warmer.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

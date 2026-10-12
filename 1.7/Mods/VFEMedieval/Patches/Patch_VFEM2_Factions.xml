@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[@Name="VFEM2_MedievalFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+    <value>
+      <DZ_Centaur>0.05</DZ_Centaur>
+      <DZ_Racing_Centaur>0.03</DZ_Racing_Centaur>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[@Name="VFEM2_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
+    <value>
+      <DZ_Centaur>0.05</DZ_Centaur>
+      <DZ_Racing_Centaur>0.03</DZ_Racing_Centaur>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/xenotypeSet/xenotypeChances</xpath>
+    <value>
+      <DZ_Centaur>0.05</DZ_Centaur>
+      <DZ_Racing_Centaur>0.03</DZ_Racing_Centaur>
+    </value>
+  </Operation>
+
+</Patch>

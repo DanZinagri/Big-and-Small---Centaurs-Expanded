@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GeneDef ParentName="GeneNoseBase">
+    <defName>DZ_CentaurAnimalNose</defName>
+    <label>animal nose</label>
+    <description>Carriers of this gene have animal-like noses.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_CentaurAnimalNose</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>410.1</displayOrderInCategory>
+  </GeneDef>
+  <GeneDef ParentName="GeneNoseBase">
+    <defName>DZ_CentaurNose</defName>
+    <label>centaur head</label>
+    <description>Carriers of this gene lack human ears in favor of centaur ears.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_CentaurEars</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>410.1</displayOrderInCategory>
+  </GeneDef>
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>DZ_CentaurEars</defName>
+    <label>centaur ears</label>
+    <description>Carriers of this gene have long, downturned equine ears.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_CentaurEars</iconPath>
+    <displayOrderInCategory>75</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/CentaurEars/centaur_ears</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>64</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>horse</symbol></li>
+        <li><symbol>flick</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>ear</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>DZ_NightmareEars</defName>
+    <label>nightmare ears</label>
+    <description>Carriers of this gene have the sharp, upright ears of a nightmare.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_NightmareEars</iconPath>
+    <displayOrderInCategory>76</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/NightmareEars/nightmare_ears</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>64</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>night</symbol></li>
+        <li><symbol>dread</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>ear</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>DZ_ThrumboHorn</defName>
+    <label>thrumbo-horn</label>
+    <description>Carriers of this gene grow a thrumbo horn protruding from the center of the forehead.</description>
+    <iconPath>UI/Icons/Genes/Gene_DZ_ThrumboHorn</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <!-- Not randomChosen, despite GeneHeadboneBase. Random-chosen genes are skipped by
+         Pawn_GeneTracker.CheckForOverrides, so when a morph swaps one horn for another the
+         incoming gene can stay flagged as overridden by a gene that no longer exists, and only
+         a reload clears it. Opting out puts these on the path that recomputes on every add and
+         remove. Safe because biostatCpx/biostatMet are non-zero, so GeneDef.RandomChosen
+         resolves to false, and because these horns are always granted explicitly. -->
+    <randomChosen>false</randomChosen>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <applyPartHediff>
+          <li>
+            <hediff>DZ_ThrumboHorn</hediff>
+            <bodyparts>
+              <li>Head</li>
+            </bodyparts>
+          </li>
+        </applyPartHediff>
+      </li>
+    </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>BSCE/ThrumboHorn/DZ_ThrumboHorn</texPath>
+        <color>(255, 255, 255)</color>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>10</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>80</layer>
+          </dataSouth>
+          <dataNorth>
+            <layer>80</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>thrumbo</symbol>
+          <weight>2</weight>
+        </li>
+        <li><symbol>horn</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>horn</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <HediffDef>
+    <defName>DZ_ThrumboHorn</defName>
+    <label>thrumbo-horn</label>
+    <description>A heavy spiral horn of thrumbo stock, grown from the center of the forehead. Solid enough to drive through armor with a lowered head.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>horn</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>14</power>
+            <chanceFactor>0.7</chanceFactor>
+            <cooldownTime>2.0</cooldownTime>
+            <armorPenetration>0.2</armorPenetration>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <addedPartProps>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+</Defs>

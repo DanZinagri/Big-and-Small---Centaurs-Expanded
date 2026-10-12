@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef>
+    <defName>DZ_NightmareRoar</defName>
+    <label>nightmare roar</label>
+    <description>Carriers can release a terrifying roar that sends nearby hostile humans and animals fleeing in terror.</description>
+    <iconPath>BSCE/Abilities/NightmareRoar</iconPath>
+    <displayCategory>Ability</displayCategory>
+    <prerequisite>Hemogenic</prerequisite>
+    <marketValueFactor>1.5</marketValueFactor>
+    <abilities>
+      <li>DZ_NightmareRoar</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>DZ_NightmareRoar</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>roar</symbol></li>
+        <li><symbol>howl</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>throat</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+</Defs>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef ParentName="DZ_CentaurBody_DireBase">
+    <defName>DZ_CentaurBody_Direhorse_Cosmetic</defName>
+    <label>direhorse body (cosmetic)</label>
+    <description>Carriers of this gene have the four-legged lower body of a direhorse in place of regular human legs. This gene is purely cosmetic: it reshapes the body but grants none of the size, strength or speed of the full gene, and grows no wool.</description>
+    <displayOrderInCategory>811</displayOrderInCategory>
+    <!-- Cosmetic twin: inherits the render nodes and race swap, drops every stat. The two
+         Inherit="False" nodes are required: without them the parent's entries are kept.
+         biostatCpx is 1 on purpose. With all biostats at 0 a gene that has render nodes counts as
+         RandomChosen (GeneDef.RandomChosen), which takes it off Pawn_GeneTracker.CheckForOverrides
+         and would make it resolve conflicts differently from the stat-carrying body genes. -->
+    <statOffsets Inherit="False" />
+    <statFactors Inherit="False" />
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <iconPath>BSCE/Icons/Direhorse</iconPath>
+  </GeneDef>
+
+</Defs>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="TribeMinotaur"]/xenotypeSet/xenotypeChances</xpath>
+    <value>
+      <DZ_Centaur>0.03</DZ_Centaur>
+      <DZ_WoolyCentaur MayRequire="veterano.mythicages.megafaunabestiary">0.03</DZ_WoolyCentaur>
+      <DZ_DireCentaur MayRequire="veterano.mythicages.megafaunabestiary">0.03</DZ_DireCentaur>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="OutlanderMinotaur"]/xenotypeSet/xenotypeChances</xpath>
+    <value>
+      <DZ_Centaur>30</DZ_Centaur>
+      <DZ_Racing_Centaur>30</DZ_Racing_Centaur>
+      <DZ_Unicorn_Centaur>30</DZ_Unicorn_Centaur>
+    </value>
+  </Operation>
+
+</Patch>

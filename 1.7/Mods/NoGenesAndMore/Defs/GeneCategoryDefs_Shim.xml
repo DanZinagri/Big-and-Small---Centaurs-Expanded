@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneCategoryDef>
+    <defName>BS_BodySwap</defName>
+    <label>Body Transformation</label>
+    <displayPriorityInXenotype>-388</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

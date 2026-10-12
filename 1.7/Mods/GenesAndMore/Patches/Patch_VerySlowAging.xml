@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Genes & More ships a gentler alternative to vanilla's Ageless: BS_VerySlowAging ages the
+       carrier at roughly a quarter speed instead of stopping age outright. Swap it in on the
+       thrumboran only; the other xenotypes keep vanilla Ageless. This whole folder only loads when Genes & More is active. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/XenotypeDef[defName="DZ_Thrumboran"]/genes/li[text()="Ageless"]</xpath>
+    <value>
+      <li>BS_VerySlowAging</li>
+    </value>
+  </Operation>
+
+</Patch>
