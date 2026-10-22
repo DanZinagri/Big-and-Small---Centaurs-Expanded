@@ -33,5 +33,6 @@
     <li IfModActive="Mlie.RoyalThrumbos">Common/Mods/RoyalThrumbos</li>
     <li IfModActive="Mlie.RoyalThrumbos">1.7/Mods/RoyalThrumbos</li>
     <li IfModActive="DanZinagri.AtavismLibraries">1.7/Mods/Atavism</li>
+    <li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.7/Mods/VEF</li>
   </v1.7>
 </loadFolders>

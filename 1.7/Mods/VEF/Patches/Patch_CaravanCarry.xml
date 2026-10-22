@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- +20% caravan carrying capacity for every centaur body. Only loads with VEF: VEF transpiles
+       MassUtility.Capacity to return its VEF_MassCarryCapacity stat (base = the vanilla
+       BodySize * 35), so a statFactor on it scales caravan mass. Vanilla has no stat for this.
+       It has to be a gated patch rather than inline in the gene defs: StatModifier entries do not
+       support MayRequire, so naming the VEF stat without VEF loaded is a cross-reference error.
+       The two abstract bases cover centaur/light and direhorse/wooly (patches run before
+       inheritance is resolved). The cosmetic body twins clear statFactors with Inherit="False",
+       so they stay stat-free. DireBase and the royal body only exist when Mythic Ages / Royal
+       Thrumbos are loaded; the or-xpath still matches the others, so the add never fails. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[@Name="DZ_CentaurBody_Base" or @Name="DZ_CentaurBody_DireBase" or defName="DZ_CentaurBody_Thrumbo" or defName="DZ_CentaurBody_AlphaThrumbo" or defName="DZ_CentaurBody_RoyalThrumbo"]/statFactors</xpath>
+    <value>
+      <VEF_MassCarryCapacity>1.2</VEF_MassCarryCapacity>
+    </value>
+  </Operation>
+
+</Patch>
