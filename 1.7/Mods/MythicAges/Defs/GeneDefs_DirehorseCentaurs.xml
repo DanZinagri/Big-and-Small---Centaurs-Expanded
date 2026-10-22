@@ -4,6 +4,7 @@
   <GeneDef Name="DZ_CentaurBody_DireBase" ParentName="BS_BodySwitchNonExclusive" Abstract="True">
     <statOffsets>
       <CarryingCapacity>50</CarryingCapacity>
+      <CaravanBonusSpeedFactor>0.2</CaravanBonusSpeedFactor>
     </statOffsets>
     <statFactors>
       <MoveSpeed>1.2</MoveSpeed>

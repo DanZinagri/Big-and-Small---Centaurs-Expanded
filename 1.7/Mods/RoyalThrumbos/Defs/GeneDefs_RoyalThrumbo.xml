@@ -15,6 +15,7 @@
     <displayOrderInCategory>801.1</displayOrderInCategory>
     <statOffsets>
       <CarryingCapacity>50</CarryingCapacity>
+      <CaravanBonusSpeedFactor>0.2</CaravanBonusSpeedFactor>
       <SM_BodySizeOffset>0.5</SM_BodySizeOffset>
     </statOffsets>
     <statFactors>
