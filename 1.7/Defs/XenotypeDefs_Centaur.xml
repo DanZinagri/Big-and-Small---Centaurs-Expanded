@@ -5,7 +5,7 @@
     <defName>DZ_Centaur</defName>
     <label>centaur</label>
     <description>Half human, half horse. Centaurs carry a human torso atop an equine body, trading the reach of a two-legged frame for speed and the strength to haul a punishing load.</description>
-    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <iconPath>BSCE/Icons/Centaur_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>300</displayPriority>
     <genes>
@@ -32,7 +32,7 @@
     <defName>DZ_Racing_Centaur</defName>
     <label>racing centaur</label>
     <description>A Racing Centaur, also known sometimes as Lightweight Centaur, are a smaller and faster varient of the centaur race.</description>
-    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <iconPath>BSCE/Icons/Centaur_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>300</displayPriority>
     <genes>
@@ -57,7 +57,7 @@
     <defName>DZ_Unicorn_Centaur</defName>
     <label>unicorn centaur</label>
     <description>A Unicorn Centaur, subspecies of Centaur that have had myths and legends written about them since before Grecian antiquity. Known as a symbol of virgin purity.</description>
-    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <iconPath>BSCE/Icons/Centaur_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>300</displayPriority>
     <genes>
@@ -97,7 +97,7 @@
     <defName>DZ_Nightmare_Centaur</defName>
     <label>Nightmare centaur</label>
     <description>A Nightmare Centaur, subspecies of Centaur that is rumored to enter dreams of sleeping individuals and create nightmares.</description>
-    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <iconPath>BSCE/Icons/Centaur_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>300</displayPriority>
     <genes>
@@ -142,7 +142,7 @@
     <defName>DZ_Thrumboran</defName>
     <label>thrumboran</label>
     <description>A centaur lineage grown from thrumbo stock. Towering, shaggy and pale, they carry a heavy spiral horn on the brow and the cold-weather bulk of the beast they were cut from.</description>
-    <iconPath>BSCE/Icons/Thrumbo</iconPath>
+    <iconPath>BSCE/Icons/Thrumboran_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>304</displayPriority>
     <genes>

@@ -5,7 +5,7 @@
     <defName>DZ_DairyCentaur</defName>
     <label>dairy centaur</label>
     <description>A Centaur subspecies that produces an exceptional amount of milk even when they're not going through a pregnancy unlike the rest of the Centaur subspecies.</description>
-    <iconPath>BSCE/Icons/Centaur</iconPath>
+    <iconPath>BSCE/Icons/Centaur_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>303</displayPriority>
     <genes>

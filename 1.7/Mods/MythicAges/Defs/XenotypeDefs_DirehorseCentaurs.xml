@@ -5,7 +5,7 @@
     <defName>DZ_DireCentaur</defName>
     <label>dire centaur</label>
     <description>Centaurs grown from the direhorse megafuana. Larger and stronger the normal centaurs.</description>
-    <iconPath>BSCE/Icons/Direhorse</iconPath>
+    <iconPath>BSCE/Icons/Centaur_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>301</displayPriority>
     <genes>
@@ -38,7 +38,7 @@
     <defName>DZ_WoolyCentaur</defName>
     <label>wooly centaur</label>
     <description>A cold-adapted centaur lineage ofshoot from the direhose centaur. They are large and stronger than even direhorse centaurs.</description>
-    <iconPath>BSCE/Icons/Direhorse_White</iconPath>
+    <iconPath>BSCE/Icons/Centaur_Xenotype</iconPath>
     <inheritable>true</inheritable>
     <displayPriority>302</displayPriority>
     <genes>
