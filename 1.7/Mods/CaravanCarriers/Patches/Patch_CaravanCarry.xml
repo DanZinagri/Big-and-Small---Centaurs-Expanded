@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Caravan riding speed for the centaur bodies. Only loads with Caravan Carriers (DanZinagri.CaravanCarriers):
+       vanilla treats every humanlike as a rider and ignores this stat on them, so without that mod it would only be
+       a gene-tooltip line that does nothing. With it, the centaur carries one caravan member at this speed, the way a
+       rideable animal does. statFactors on a base of 1.0, so 1.4 means 140%.
+       The cosmetic body twins clear their inherited stats with Inherit="False", so they stay stat-free.
+       The thrumborans are slow (move speed 100%, alpha 90%) and carry by size, so they sit on vanilla's heavy-animal
+       tier (elephant, mastodon: 130%) rather than the thrumbo animals' values. -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody"]/statFactors</xpath>
+    <value>
+      <CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Light"]/statFactors</xpath>
+    <value>
+      <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo" or defName="DZ_CentaurBody_AlphaThrumbo"]/statFactors</xpath>
+    <value>
+      <CaravanRidingSpeedFactor>1.3</CaravanRidingSpeedFactor>
+    </value>
+  </Operation>
+
+  <!-- The direhorse bodies only exist with Mythic Ages, the royal one only with Royal Thrumbos. A plain add would
+       error when they are missing, so these check first; with no nomatch the conditional succeeds quietly. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Direhorse"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Direhorse" or defName="DZ_CentaurBody_Wooly"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.5</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_RoyalThrumbo"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="DZ_CentaurBody_RoyalThrumbo"]/statFactors</xpath>
+      <value>
+        <CaravanRidingSpeedFactor>1.3</CaravanRidingSpeedFactor>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>
