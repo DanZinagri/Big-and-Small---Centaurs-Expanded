@@ -17,6 +17,11 @@
       <SM_BodySizeMultiplier>1.70</SM_BodySizeMultiplier>
       <ConstructionSpeed>1.10</ConstructionSpeed>
     </statFactors>
+    <forcedTraits>
+      <li>
+        <def>BS_Giant</def>
+      </li>
+    </forcedTraits>
     <biostatCpx>0</biostatCpx>
     <biostatMet>-2</biostatMet>
     <randomChosen>false</randomChosen>
