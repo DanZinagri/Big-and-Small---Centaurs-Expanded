@@ -19,6 +19,7 @@
       <li>AptitudeTerrible_Medicine</li>
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Moderate</li>
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
@@ -45,6 +46,7 @@
       <li>AptitudeTerrible_Cooking</li>
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody_Light</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Moderate</li>
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
@@ -84,6 +86,7 @@
       <li>DZ_UnicornMending</li>
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody_Light</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Moderate</li>
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
@@ -129,6 +132,7 @@
       <li>AptitudePoor_Plants</li>
       <li>Mood_Pessimist</li>
       <li>DZ_CentaurBody_Light</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Moderate</li>
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
@@ -157,6 +161,7 @@
       <li MayRequire="Ludeon.RimWorld.Odyssey">DZ_ThrumboRoar</li>
       <li>Body_Standard</li>
       <li>DZ_CentaurBody_Thrumbo</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Great</li>
       <li>DZ_ThrumboAdultMorph</li>
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurNose</li>

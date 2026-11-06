@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- With Genes & More, every centaur xenotype lists one of its gene stabilizing genes (MayRequire in the
+       xenotype defs): BS_GeneStabilizing_Moderate (+2 metabolism), or BS_GeneStabilizing_Great (+4) on the
+       thrumboran, which the royal and alpha morphs keep. The body genes pay for it here, so every xenotype's total
+       metabolism is the same as without Genes & More. Cosmetic body twins set their own biostatMet 0 and are not
+       affected. Abstract bases are matched by Name; patches run before inheritance, so the children pick it up.
+       Royal thrumbo and direhorse bodies only exist with their mods, hence the conditionals. -->
+
+  <!-- -2 -> -4 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[@Name="DZ_CentaurBody_Base"]/biostatMet</xpath>
+    <value>
+      <biostatMet>-4</biostatMet>
+    </value>
+  </Operation>
+
+  <!-- -2 -> -6 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo"]/biostatMet</xpath>
+    <value>
+      <biostatMet>-6</biostatMet>
+    </value>
+  </Operation>
+
+  <!-- -2 -> -6 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_AlphaThrumbo"]/biostatMet</xpath>
+    <value>
+      <biostatMet>-6</biostatMet>
+    </value>
+  </Operation>
+
+  <!-- -3 -> -7 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_RoyalThrumbo"]/biostatMet</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/GeneDef[defName="DZ_CentaurBody_RoyalThrumbo"]/biostatMet</xpath>
+      <value>
+        <biostatMet>-7</biostatMet>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- -2 -> -4 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[@Name="DZ_CentaurBody_DireBase"]/biostatMet</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/GeneDef[@Name="DZ_CentaurBody_DireBase"]/biostatMet</xpath>
+      <value>
+        <biostatMet>-4</biostatMet>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>
