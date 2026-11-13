@@ -31,7 +31,6 @@
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
-      <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
 
       <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaHorse</li>
     </genes>
@@ -73,7 +72,6 @@
       <li MayRequire="RedMattis.BigSmall.Core">BS_EarlyMaturity</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
-      <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
 
       <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaHorse</li>
     </genes>
