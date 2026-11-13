@@ -8,48 +8,48 @@
        affected. Abstract bases are matched by Name; patches run before inheritance, so the children pick it up.
        Royal thrumbo and direhorse bodies only exist with their mods, hence the conditionals. -->
 
-  <!-- -2 -> -4 -->
+  <!-- 0 -> -2 -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[@Name="DZ_CentaurBody_Base"]/biostatMet</xpath>
+    <value>
+      <biostatMet>-2</biostatMet>
+    </value>
+  </Operation>
+
+  <!-- 0 -> -4 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo"]/biostatMet</xpath>
     <value>
       <biostatMet>-4</biostatMet>
     </value>
   </Operation>
 
-  <!-- -2 -> -6 -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/GeneDef[defName="DZ_CentaurBody_Thrumbo"]/biostatMet</xpath>
-    <value>
-      <biostatMet>-6</biostatMet>
-    </value>
-  </Operation>
-
-  <!-- -2 -> -6 -->
+  <!-- 0 -> -4 -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[defName="DZ_CentaurBody_AlphaThrumbo"]/biostatMet</xpath>
     <value>
-      <biostatMet>-6</biostatMet>
+      <biostatMet>-4</biostatMet>
     </value>
   </Operation>
 
-  <!-- -3 -> -7 -->
+  <!-- -1 -> -5 -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/GeneDef[defName="DZ_CentaurBody_RoyalThrumbo"]/biostatMet</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/GeneDef[defName="DZ_CentaurBody_RoyalThrumbo"]/biostatMet</xpath>
       <value>
-        <biostatMet>-7</biostatMet>
+        <biostatMet>-5</biostatMet>
       </value>
     </match>
   </Operation>
 
-  <!-- -2 -> -4 -->
+  <!-- 0 -> -2 -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/GeneDef[@Name="DZ_CentaurBody_DireBase"]/biostatMet</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/GeneDef[@Name="DZ_CentaurBody_DireBase"]/biostatMet</xpath>
       <value>
-        <biostatMet>-4</biostatMet>
+        <biostatMet>-2</biostatMet>
       </value>
     </match>
   </Operation>

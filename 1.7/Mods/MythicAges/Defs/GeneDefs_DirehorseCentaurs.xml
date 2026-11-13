@@ -9,9 +9,13 @@
     <statFactors>
       <MoveSpeed>1.2</MoveSpeed>
       <CarryingCapacity>1.5</CarryingCapacity>
+      <SM_RaidWealthMultiplier>1.5</SM_RaidWealthMultiplier>
     </statFactors>
-    <biostatCpx>0</biostatCpx>
-    <biostatMet>-2</biostatMet>
+    <!-- complexity 1, not 0: with metabolism 0 as well, a gene with render nodes counts as RandomChosen
+         (GeneDef.RandomChosen ignores the randomChosen=false field then), which takes it off
+         Pawn_GeneTracker.CheckForOverrides and breaks body overrides during morphs. -->
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
     <randomChosen>false</randomChosen>
     <exclusionTags>
       <li>Bug_BodyAttachment</li>

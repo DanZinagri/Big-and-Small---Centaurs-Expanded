@@ -23,6 +23,7 @@
       <CarryingCapacity>1.5</CarryingCapacity>
       <SM_BodySizeMultiplier>1.75</SM_BodySizeMultiplier>
       <ConstructionSpeed>1.10</ConstructionSpeed>
+      <SM_RaidWealthMultiplier>1.5</SM_RaidWealthMultiplier>
     </statFactors>
     <forcedTraits>
       <li>
@@ -30,7 +31,7 @@
       </li>
     </forcedTraits>
     <biostatCpx>0</biostatCpx>
-    <biostatMet>-3</biostatMet>
+    <biostatMet>-1</biostatMet>
     <randomChosen>false</randomChosen>
     <geneClass>BigAndSmall.ProductionGene</geneClass>
     <iconPath>BSCE/Icons/RoyalThrumbo</iconPath>

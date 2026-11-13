@@ -25,6 +25,8 @@
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody</li>
       <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Moderate</li>
+      <li MayRequire="sarg.alphagenes">AG_Rowdy</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_EarlyMaturity</li>
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>

@@ -26,6 +26,8 @@
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody_Direhorse</li>
       <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Moderate</li>
+      <li MayRequire="sarg.alphagenes">AG_Rowdy</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_EarlyMaturity</li>
       <li>DZ_CentaurNose</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
@@ -67,6 +69,8 @@
       <li>DZ_CentaurEars</li>
       <li>DZ_CentaurBody_Wooly</li>
       <li MayRequire="RedMattis.BigSmall.Core">BS_GeneStabilizing_Moderate</li>
+      <li MayRequire="sarg.alphagenes">AG_Rowdy</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_EarlyMaturity</li>
       <li MayRequire="tug.minotaur">RBM_RuminantStomach</li>
       <li MayRequire="tug.minotaur">RBM_EstrousCycle</li>
       <li MayRequire="Euterpe.MilkyTitfuck">SEX_MoreMilk</li>
